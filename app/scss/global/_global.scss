@@ -1,0 +1,130 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Rubik', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+  color: $secondary;
+  background-color: $light;
+  overflow-x: hidden;
+  
+  &.lock {
+    overflow-y: hidden;
+  }
+}
+
+
+.wrapper {
+   position: relative;
+   overflow-x: hidden;
+
+   &.lock {
+     overflow-y: hidden;
+   }
+}
+
+main {
+  flex-grow: 1;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.section {
+  padding: 60px 0;
+
+  @media (min-width: 1200px) {
+    padding: 94px 0;
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 400;
+  color: $grey-dark;
+
+  @media (min-width: 1200px) {
+    margin-bottom: 36px;
+  }
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  @media (min-width: 1200px) {
+    justify-content: flex-start;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    transition: background-color 0.4s, box-shadow 0.4s, outline 0.4s;
+
+    &--white {
+      background-color: rgba($light, 0.1);
+
+      .social__icon {
+        fill: $light;
+      }
+    }
+
+    &:focus {
+      outline: solid 1px $accent;
+      outline-offset: 4px;
+    }
+
+    &:hover {
+      background-color: $accent;
+
+      .social__icon {
+        fill: $grey-light;
+      }
+    }
+
+    &:active {
+      box-shadow: inset 4px 4px 4px rgba($primary, 0.25);
+      background-color: $accent;
+
+      .social__icon {
+        fill: $light;
+      }
+    }
+  }
+
+  &__icon {
+    fill: $secondary;
+    transition: fill 0.4s;
+  }
+}
