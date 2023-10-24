@@ -1,0 +1,108 @@
+.slide {
+  z-index: 200;
+
+  &__container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__content {
+    width: fit-content;
+    margin-top: auto;
+    margin-bottom: 120px;
+    padding: 20px 40px;
+    border-radius: 12px;
+    background: linear-gradient(248deg, rgba(255, 0, 0, 0.17) 1.52%, rgba(255, 255, 255, 0.00) 96.99%);
+    backdrop-filter: blur(25px);
+
+  }
+
+  &__tagline {
+    color: $light;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 1;
+  }
+
+  &__title {
+    color: $light;
+    font-size: 80px;
+    font-weight: 700;
+    line-height: 1;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+  }
+
+  &__list {
+    display: flex;
+    column-gap: 15px;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px;
+    width: 24px;
+    height: 24px;
+    border: 1px solid $white;
+    border-radius: 4px;
+    opacity: 0.6;
+  }
+
+  &__icon {
+    fill: $white;
+  }
+}
+
+.hero {
+  background-color: $dark;
+
+}
+
+.slider {
+  height: 100vh;
+  position: relative;
+
+  &__wrapper {
+    will-change: transform;
+    transform-style: preserve-3d;
+  }
+
+  &__item {
+    overflow: hidden;
+
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      box-shadow: inset 0 0 250px rgba(16, 2, 66, 0.3)
+    }
+  }
+
+  &__layer {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    will-change: transform;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+  }
+
+  &__pagination {
+    position: absolute;
+    
+    bottom: 114px;
+    right: 375px;
+   
+  }
+}
+
