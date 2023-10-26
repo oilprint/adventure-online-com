@@ -21,7 +21,47 @@
 </head>
 
 <body>
-  
+  <header class="header">
+  <div class="container header__container">
+    <nav class="header__nav">
+      <a href="#" class="logo header__logo">
+        <img class="logo__img" src="/images/logo.svg" alt="Logo Adventure Online">
+      </a>
+
+      <ul class="menu header__menu">
+        <li class="menu__item">
+          <a class="menu__link current" href="#">
+            Home
+          </a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link @@trips"  href="#">
+            Your trips
+          </a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link @@stories" href="#">
+            Stories
+          </a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link @@guide" href="#">
+            Smart guide
+          </a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link @@contact" href="#">
+            Contact
+          </a>
+        </li>
+      </ul>
+
+      <button class="button header__botton" type="button">
+        Book a Trip
+      </button>
+    </nav>
+  </div>
+</header>
 
   <main>
     <h1 class="sr-only">
@@ -175,7 +215,121 @@
     </section>
   </main>
 
-  
+   <footer class="footer">
+  <div class="container">
+    <form class="footer__form subscribe-form" action="#">
+      <label class="sr-only" for="name">
+        Name
+      </label>
+      <input id="name" class="subscribe-form__input" type="text" placeholder="Name">
+
+      <label class="sr-only" for="e-mail">
+        E-mail
+      </label>
+      <input class="subscribe-form__input" id="e-mail" type="email" placeholder="E-mail" name="email" required>
+
+      <button class="button subscribe-form__button" type="submit">
+        subscribe
+      </button>
+    </form>
+    <div class="footer__content">
+      <a class="logo footer__logo" href="#">
+        <img class="logo__img" src="/images/logo-white.svg" alt="Logo Adventure Online">
+      </a>
+
+      <address class="footer__address">
+        <div class="footer__geo">
+          2464 Royal Ln. Mesa,
+          <br>
+          New Jersey 45463
+        </div>
+        <a class="footer__address-item footer__address-item--big" href="tel:+12085550112">
+          (208) 555-0112
+        </a>
+        <a class="footer__address-item" href="mailto:info@dolguldur.com">
+          <svg class="footer__address-icon" width="20" height="20">
+            <use href="./images/symbol-defs.svg#icon-mail"></use>
+          </svg>
+          info@dolguldur.com
+        </a>
+      </address>
+
+      <div class="footer__social">
+        <h2 class="footer__title">
+          Join us
+        </h2>
+        <ul class="footer__list">
+          <li class="footer__social">
+            <a class="footer__social-link" href="#">
+              Facebook
+            </a>
+          </li>
+          <li class="footer__social">
+            <a class="footer__social-link" href="#">
+              Youtube
+            </a>
+          </li>
+          <li class="footer__social">
+            <a class="footer__social-link" href="#">
+              Instagram
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <ul class="menu footer__menu">
+      <li class="menu__item">
+        <a class="menu__link current" href="#">
+          Home
+        </a>
+      </li>
+      <li class="menu__item">
+        <a class="menu__link @@trips" href="#">
+          Your trips
+        </a>
+      </li>
+      <li class="menu__item">
+        <a class="menu__link @@stories" href="#">
+          Stories
+        </a>
+      </li>
+      <li class="menu__item">
+        <a class="menu__link @@guide" href="#">
+          Smart guide
+        </a>
+      </li>
+      <li class="menu__item">
+        <a class="menu__link @@contact" href="#">
+          Contact
+        </a>
+      </li>
+    </ul>
+
+    <div class="footer__bottom">
+      <ul class="footer__policy">
+        <li class="footer__policy-item">
+          © 2023. All rights reserved
+        </li>
+        <li class="footer__policy-item">
+          <a class="footer__link" href="#">
+            Terms
+          </a>
+        </li>
+        <li class="footer__policy-item">
+          <a class="footer__link" href="#">
+            Privacy
+          </a>
+        </li>
+      </ul>
+      <a class="footer__link" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=kozlova.ux@gmail.com"
+        target="_blank">
+        created by iryna kozlova
+      </a>
+
+    </div>
+  </div>
+</footer>
 
   <script src="js/main.min.js"></script>
 </body>
