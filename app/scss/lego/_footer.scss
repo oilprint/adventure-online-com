@@ -9,6 +9,7 @@
   &__content {
     display: flex;
     justify-content: space-between;
+    align-items: start;
     gap: 30px;
     margin-bottom: 30px;
   }
@@ -23,10 +24,11 @@
     margin-bottom: 14px;
   }
 
-  &__address-item {
+  &__address-link {
     position: relative;
     display: flex;
     align-items: center;
+    width: fit-content;
     color: $light;
     transition: color 0.4s;
 
@@ -75,65 +77,6 @@
     transition: fill 0.4s;
   }
 
-  &__title {
-    font-size: 32px;
-    text-transform: uppercase;
-    color: $light;
-    margin-bottom: 14px;
-  }
-
-  &__social {
-    &:not(:last-child) {
-      margin-bottom: 14px;
-    }
-  }
-
-  &__social-link {
-    position: relative;
-    width: fit-content;
-    display: block;
-    text-transform: uppercase;
-    color: $accent;
-    transition: color 0.4s, outline 0.4s;
-
-    &::before {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 1px;
-      left: 0;
-      bottom: -4px;
-      background-color: $accent;
-      transform-origin: right;
-      transform: scaleX(0);
-      transition: transform 0.4s ease-in-out;
-    }
-
-    &:focus {
-      outline: solid 1px $accent;
-      border-radius: 4px;
-      outline-offset: 4px;
-    }
-
-    &:hover {
-      color: $accent;
-
-      &::before {
-        transform: scaleX(1);
-        transform-origin: left;
-      }
-    }
-
-    &:active {
-      color: $primary;
-
-      &:before {
-        transform: scaleX(1);
-        transform-origin: left;
-      }
-    }
-  }
-
   &__menu {
     margin: 0 auto;
     margin-bottom: 50px;
@@ -143,31 +86,37 @@
   &__bottom {
     display: flex;
     justify-content: space-between;
-
   }
 
-  &__policy {
+  &__info {
     display: flex;
+    align-items: center;
   }
 
-  &__policy-item {
-    &:not(:last-child) {
-      margin-right: 30px;
+  &__text {
+    margin-right: 30px;
+  }
+
+  &__links {
+    display: flex;
+
+  }
+
+  &__links-item {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: '';
+      width: 2px;
+      height: 16px;
+      background-color: $primary;
+      top: 4px;
+      left: -15px;
     }
 
-    &:not(:first-child) {
-      position: relative;
-
-      &::before {
-        position: absolute;
-        content: '';
-        width: 2px;
-        height: 16px;
-        background-color: $primary;
-        top: 4px;
-        left: -15px;
-
-      }
+    &:not(:last-child) {
+      margin-right: 30px;
     }
   }
 
@@ -182,7 +131,6 @@
 
     &:hover {
       color: $accent;
-
     }
 
     &:active {
@@ -226,7 +174,6 @@
       &::placeholder {
         color: $accent;
       }
-
     }
   }
 }
