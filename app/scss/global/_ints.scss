@@ -20,7 +20,6 @@
   &__img {
     width: 147px;
   }
-
 }
 
 .button {
@@ -28,13 +27,14 @@
   padding: 18px 36px;
   font-size: 16px;
   font-weight: 500;
+  line-height: 1;
   text-transform: uppercase;
   border-radius: 12px;
   color: $dark;
   background-color: $accent;
-  transition: color 0.4s ease-in-out,
-    background-color 0.4s ease-in-out,
-    outline 0.4s ease-in-out;
+  transition: color 0.4s,
+    background-color 0.4s,
+    outline 0.4s;
 
   &:focus {
     outline: solid 1px $accent;

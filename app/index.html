@@ -8,20 +8,59 @@
   <title>Travel Agency Adventure Online | Home Page</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&family=Rubik:wght@400;500&display=swap"
-    rel="stylesheet">
-
-  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+  href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&family=Rubik:wght@400;500&display=swap"
+  rel="stylesheet">
+  <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="./images/favicon/favicon-16x16.png">
 
   <link rel="stylesheet" href="css/index.min.css">
 </head>
 
 <body>
-  
+  <header class="header">
+  <div class="container header__container">
+    <nav class="header__nav">
+      <a href="#" class="logo header__logo">
+        <img class="logo__img" src="./images/logo.svg" alt="Logo Adventure Online">
+      </a>
+
+      <ul class="menu header__menu">
+        <li class="menu__item">
+          <a class="menu__link current" href="#">
+            Home
+          </a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link @@trips"  href="#">
+            Your trips
+          </a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link @@stories" href="#">
+            Stories
+          </a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link @@guide" href="#">
+            Smart guide
+          </a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link @@contact" href="#">
+            Contact
+          </a>
+        </li>
+      </ul>
+
+      <button class="button" type="button">
+        Book a Trip
+      </button>
+    </nav>
+  </div>
+</header>
 
   <main>
     <section class="news section" style="background-image: url(./images/decor/decor-news.png);">
@@ -104,7 +143,128 @@
 </section>
   </main>
 
-  
+   <footer class="footer">
+  <div class="container">
+    <form class="footer__form subscribe-form" action="#">
+      <label class="subscribe-form__label" for="name">
+        <span class="sr-only">
+          Name
+        </span>
+      </label>
+      <input id="name" class="subscribe-form__input" type="text" placeholder="Name" required>
+
+      <label class="subscribe-form__label" for="e-mail">
+        <span class="sr-only">
+          E-mail
+        </span>
+      </label>
+      <input id="e-mail" class="subscribe-form__input" type="email" placeholder="E-mail" name="email" required>
+
+      <button class="button subscribe-form__button" type="submit">
+        subscribe
+      </button>
+    </form>
+
+    <div class="footer__content">
+      <a class="logo footer__logo" href="#">
+        <img class="logo__img" src="./images/logo-white.svg" alt="Logo Adventure Online">
+      </a>
+
+      <address class="footer__address">
+        <div class="footer__geo">
+          2464 Royal Ln. Mesa,
+          <br>
+          New Jersey 45463
+        </div>
+        <a class="footer__address-link footer__address-link--big" href="tel:+12085550112">
+          (208) 555-0112
+        </a>
+        <a class="footer__address-link" href="mailto:info@dolguldur.com">
+          <svg class="footer__address-icon" width="20" height="20">
+            <use href="./images/symbol-defs.svg#icon-mail"></use>
+          </svg>
+          info@dolguldur.com
+        </a>
+      </address>
+
+      <div class="social">
+        <h2 class="social__title">
+          Join us
+        </h2>
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__link" href="#">
+              Facebook
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" href="#">
+              Youtube
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" href="#">
+              Instagram
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <ul class="menu footer__menu">
+      <li class="menu__item">
+        <a class="menu__link current" href="#">
+          Home
+        </a>
+      </li>
+      <li class="menu__item">
+        <a class="menu__link @@trips" href="#">
+          Your trips
+        </a>
+      </li>
+      <li class="menu__item">
+        <a class="menu__link @@stories" href="#">
+          Stories
+        </a>
+      </li>
+      <li class="menu__item">
+        <a class="menu__link @@guide" href="#">
+          Smart guide
+        </a>
+      </li>
+      <li class="menu__item">
+        <a class="menu__link @@contact" href="#">
+          Contact
+        </a>
+      </li>
+    </ul>
+
+    <div class="footer__bottom">
+      <div class="footer__info">
+        <p class="footer__text">
+          © 2023. All rights reserved
+        </p>
+
+        <ul class="footer__links">
+          <li class="footer__links-item">
+            <a class="footer__link" href="#">
+              Terms
+            </a>
+          </li>
+          <li class="footer__links-item">
+            <a class="footer__link" href="#">
+              Privacy
+            </a>
+          </li>
+        </ul>
+      </div>
+      <a class="footer__link" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=kozlova.ux@gmail.com"
+        target="_blank">
+        created by iryna kozlova
+      </a>
+    </div>
+  </div>
+</footer>
 
   <script src="js/main.min.js"></script>
 </body>
