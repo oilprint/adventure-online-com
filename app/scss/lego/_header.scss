@@ -1,0 +1,21 @@
+.header {
+  position: fixed;
+  z-index: 900;
+  top: 20px;
+  left: 0;
+  right: 0;
+
+  &__container {
+    padding: 20px 40px;
+    border-radius: 12px;
+    background-color: rgba($light, 0.9);
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 30px;
+  }
+}
+

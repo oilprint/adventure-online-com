@@ -2,10 +2,6 @@
 @import 'global/vars';
 @import 'global/ints';
 
-html,
-body {
-  height: 100%;
-}
 
 body {
   display: flex;
@@ -48,6 +44,7 @@ main {
 
 @import 'lego/header';
 @import 'lego/footer';
+@import 'lego/menu';
 
 .title {
   font-family: 'Rubik',
@@ -72,16 +69,64 @@ main {
   color: $accent;
 }
 
-.section {
-  background-repeat: no-repeat;
-  background-position: top 10px center;
-  background-size: 80vw;
+.social {
+   &__title {
+     font-size: 32px;
+     text-transform: uppercase;
+     color: $light;
+     margin-bottom: 14px;
+   }
 
-  padding: 50px 0 70px;
-  background-color: $dark;
+   &__item {
+     &:not(:last-child) {
+       margin-bottom: 14px;
+     }
+   }
 
-  &--light {
-    background-color: $light;
-  }
+   &__link {
+     position: relative;
+     width: fit-content;
+     display: block;
+     text-transform: uppercase;
+     color: $accent;
+     transition: color 0.4s, outline 0.4s;
+
+     &::before {
+       content: '';
+       position: absolute;
+       width: 100%;
+       height: 1px;
+       left: 0;
+       bottom: -4px;
+       background-color: $accent;
+       transform-origin: right;
+       transform: scaleX(0);
+       transition: transform 0.4s ease-in-out;
+     }
+
+     &:focus {
+       outline: solid 1px $accent;
+       border-radius: 4px;
+       outline-offset: 4px;
+     }
+
+     &:hover {
+       color: $accent;
+
+       &::before {
+         transform: scaleX(1);
+         transform-origin: left;
+       }
+     }
+
+     &:active {
+       color: $primary;
+
+       &:before {
+         transform: scaleX(1);
+         transform-origin: left;
+       }
+     }
+   }
 }
 
