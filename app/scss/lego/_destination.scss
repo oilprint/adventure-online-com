@@ -12,9 +12,6 @@
     .destinations-card__description {
       transform: translateY(0);
     }
-    &+& {
-        filter: blur(5px);
-    }
   }
 
   &__box {
@@ -27,7 +24,7 @@
 
   &__img {
     object-fit: cover;
-    
+
   }
 
   &__title {
@@ -157,5 +154,4 @@
     margin: 0 auto;
     width: fit-content;
   }
-
 }
