@@ -47,16 +47,16 @@ main {
 @import 'lego/menu';
 
 .section {
-    background-repeat: no-repeat;
-    background-position: top 10px center;
-    background-size: 80vw;
+  background-repeat: no-repeat;
+  background-position: top 10px center;
+  background-size: 80vw;
 
-    padding: 50px 0 70px;
-    background-color: $dark;
+  padding: 50px 0 70px;
+  background-color: $dark;
 
-    &--light {
-      background-color: $light;
-    }
+  &--light {
+    background-color: $light;
+  }
 }
 
 .title {
