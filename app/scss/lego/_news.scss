@@ -1,0 +1,118 @@
+.news {
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__subtitle {
+    margin-bottom: 50px;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+  }
+
+  &__item {
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: space-between;
+    max-width: 370px;
+    width: 100%;
+    border-radius: 24px;
+   
+    &--first {
+
+      &::before {
+        position: absolute;
+        content: '';
+        bottom: -40px;
+        left: 0;
+        opacity: 0.7;
+        background-image: url('./../images/blog/trips-decor.svg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: bottom left;
+
+        width: 430px;
+        height: 115px;
+      }
+    }
+
+    &--big {
+      grid-column-start: span 2;
+    }
+  }
+
+  &__txt {
+    text-align: right;
+    font-size: 40px;
+    line-height: 1.1;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: $primary;
+  }
+}
+
+.news-card {
+  max-width: 770px;
+  width: 100%;
+  padding: 20px;
+  background-color: $white;
+  border-radius: 24px;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__img-box {
+    margin-right: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 14px;
+    overflow: hidden;
+    max-width: 250px;
+    width: 100%;
+  }
+
+  &__img {
+    object-fit: cover;
+  }
+
+  &__content {
+    max-width: 446px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 40px 40px;
+  }
+
+  &__title {
+    max-width: 340px;
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 37px;
+    line-height: 1.1;
+    font-weight: 200;
+    text-transform: uppercase;
+  }
+
+  &__txt {
+    margin-bottom: 18px;
+    font-size: 20px;
+  }
+
+  &__button {
+    margin-left: auto;
+    width: fit-content;
+  }
+}
