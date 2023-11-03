@@ -1,0 +1,45 @@
+.book {
+
+  &__title {
+    margin-bottom: 44px;
+  }
+
+  &__button {
+    margin: 0 auto 100px;
+  }
+}
+
+.ticker {
+  position: relative;
+  overflow: hidden;
+  background-color: $light;
+
+  &__wrapper {
+    display: flex;
+  }
+
+  &__item {
+    padding: 50px 100px;
+    white-space: nowrap;
+    font-size: 144px;
+    font-weight: 700;
+    line-height: 1;
+    font-weight: 700;
+    color: $light;
+    text-transform: uppercase;
+    text-shadow: rgba($dark, 0.6) 0.5px 0px 0,
+      rgba($dark, 0.6) 0px 0.5px 0,
+      rgba($dark, 0.6) 0px -0.5px 0,
+      rgba($dark, 0.6) -0.5px 0px 0;
+    animation: ticker 15s linear infinite;
+  }
+}
+
+@keyframes ticker {
+  0% {
+    transform: translateZ(0);
+  }
+  to {
+transform: translate3d(-100%, 0, 0);
+  }
+}
