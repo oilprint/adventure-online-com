@@ -69,6 +69,19 @@ main {
   color: $accent;
 }
 
+.section {
+  background-repeat: no-repeat;
+  background-position: top 10px center;
+  background-size: 80vw;
+
+  padding: 50px 0 70px;
+  background-color: $dark;
+
+  &--light {
+    background-color: $light;
+  }
+}
+
 .social {
    &__title {
      font-size: 32px;
