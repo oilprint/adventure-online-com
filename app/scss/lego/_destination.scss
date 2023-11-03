@@ -1,0 +1,161 @@
+.destinations-card {
+  max-width: 570px;
+  width: 100%;
+
+  &:focus {
+    .destinations-card__description {
+      transform: translateY(0);
+    }
+  }
+
+  &:hover {
+    .destinations-card__description {
+      transform: translateY(0);
+    }
+    &+& {
+        filter: blur(5px);
+    }
+  }
+
+  &__box {
+    position: relative;
+    border-radius: 24px;
+    background-color: $dark;
+    overflow: hidden;
+    margin-bottom: 10px;
+  }
+
+  &__img {
+    object-fit: cover;
+    
+  }
+
+  &__title {
+    font-size: 50px;
+    font-weight: 200;
+    line-height: 1.1;
+  }
+
+  &__description {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 15px;
+    background-color: $dark;
+    border-radius: 24px;
+    transform: translateY(101%);
+    transition: transform 0.8s;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: 20px 10px;
+    background-color: $white;
+    border-radius: 9px;
+  }
+
+  &__geo {
+    font-size: 50px;
+    font-weight: 200;
+    line-height: 1.1;
+    margin-bottom: 30px;
+  }
+
+  &__list {
+    display: flex;
+    margin-bottom: 30px;
+  }
+
+  &__item {
+    padding: 7px 10px;
+    background-color: $light;
+    display: flex;
+    flex-direction: column;
+
+    &--accent {
+      position: relative;
+      background-color: $accent;
+      color: $light;
+
+      &::before {
+        position: absolute;
+        content: '';
+        top: 0;
+        right: -10px;
+        bottom: 0;
+        width: 0;
+        height: 0;
+        border: 0 solid transparent;
+        border-bottom-width: 28px;
+        border-top-width: 28px;
+        border-left: 10px solid $accent;
+      }
+    }
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+
+    &:first-child {
+      margin-right: 20px;
+    }
+  }
+
+  &__subtitle {
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+  &__txt {
+    font-size: 24px;
+    line-height: 1.1;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  &__icons {
+    display: flex;
+    column-gap: 30px;
+  }
+
+  &__icons-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6px;
+    border: 1px solid $primary;
+    border-radius: 4px;
+  }
+
+  &__icon {
+    fill: $primary;
+  }
+}
+
+.destinations {
+
+  &__title {
+    margin-bottom: 70px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-bottom: 70px;
+  }
+
+  &__link {
+    display: block;
+    margin: 0 auto;
+    width: fit-content;
+  }
+
+}
