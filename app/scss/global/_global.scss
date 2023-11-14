@@ -51,7 +51,7 @@ main {
   background-position: top 10px center;
   background-size: 80vw;
   padding: 50px 0 70px;
-  
+
 
   &--light {
     background-color: $light;
@@ -163,15 +163,11 @@ main {
 
   &__inner {
     position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 
     &::after {
       position: absolute;
       content: '';
       width: 600px;
-      height: 215px;
       top: 0;
       bottom: 0;
       right: 0;
@@ -204,10 +200,25 @@ main {
         background-image: url('./../images/category/photo-04.jpg');
       }
     }
+
+    &--water2 {
+      &::after {
+        background-image: url('./../images/category/water-2.jpg');
+      }
+    }
+
+    &--hiking2 {
+      &::after {
+        background-image: url('./../images/category/hiking-2.jpg');
+      }
+    }
+
   }
 
   &__content {
     position: relative;
+    display: flex;
+    flex-direction: column;
     text-align: left;
     max-width: 480px;
     width: 100%;
@@ -241,5 +252,23 @@ main {
 
   &__img {
     object-fit: cover;
+  }
+
+  &--small {
+    grid-column-start: span 2;
+
+    .info-card__inner {
+      max-width: 446px;
+      width: 100%;
+    }
+
+    .info-card__content {
+      margin-left: 280px;
+    }
+
+    .info-card__inner::after {
+      width: 250px;
+      left: 0;
+    }
   }
 }
