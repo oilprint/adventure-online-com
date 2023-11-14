@@ -12,7 +12,7 @@ body {
   line-height: 1.3;
   color: $primary;
   overflow-x: hidden;
-  background-color: $light;
+  background-color: $dark;
 
   &.lock {
     overflow-y: hidden;
@@ -50,9 +50,8 @@ main {
   background-repeat: no-repeat;
   background-position: top 10px center;
   background-size: 80vw;
-
   padding: 50px 0 70px;
-  background-color: $dark;
+  
 
   &--light {
     background-color: $light;
@@ -62,7 +61,6 @@ main {
 .title {
   font-family: 'Rubik',
     sans-serif;
-  text-align: center;
   font-size: 90px;
   font-weight: 400;
   line-height: 1;
@@ -76,7 +74,6 @@ main {
 }
 
 .subtitle {
-  text-align: center;
   font-size: 48px;
   text-transform: uppercase;
   color: $accent;
@@ -88,6 +85,7 @@ main {
   background-size: 80vw;
   padding: 50px 0 70px;
   background-color: $dark;
+  text-align: center;
 
   &--light {
     background-color: $light;
@@ -152,5 +150,96 @@ main {
         transform-origin: left;
       }
     }
+  }
+}
+
+.info-card {
+  max-width: 1160px;
+  width: 100%;
+
+  padding: 20px;
+  background-color: $white;
+  border-radius: 24px;
+
+  &__inner {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &::after {
+      position: absolute;
+      content: '';
+      width: 600px;
+      height: 215px;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      border-radius: 14px;
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      background-size: cover;
+    }
+
+    &--water {
+      &::after {
+        background-image: url('./../images/category/photo-02.jpg');
+      }
+    }
+
+    &--hiking {
+      &::after {
+        background-image: url('./../images/category/photo-01.jpg');
+      }
+    }
+
+    &--urban {
+      &::after {
+        background-image: url('./../images/category/photo-03.jpg');
+      }
+    }
+
+    &--winter {
+      &::after {
+        background-image: url('./../images/category/photo-04.jpg');
+      }
+    }
+  }
+
+  &__content {
+    position: relative;
+    text-align: left;
+    max-width: 480px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 40px 40px;
+  }
+
+  &__title {
+    margin-right: 150px;
+    margin-bottom: 10px;
+    font-size: 37px;
+    line-height: 1.1;
+    font-weight: 200;
+    text-transform: uppercase;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    min-height: 2.2em;
+  }
+
+  &__txt {
+    margin-bottom: 18px;
+    font-size: 20px;
+  }
+
+  &__button {
+
+    margin-left: auto;
+  }
+
+  &__img {
+    object-fit: cover;
   }
 }

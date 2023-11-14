@@ -56,7 +56,7 @@
 
 .link {
   position: relative;
-  display: block;
+  display: inline-block;
   width: fit-content;
   font-size: 22px;
   font-weight: 200;
@@ -87,17 +87,17 @@
 
     &::before {
       transform: scaleX(0);
-      transform-origin: left;
+      transform-origin: right;
     }
   }
 
   &:active {
-    color: $primary;
+    color: $accent;
     opacity: 0, 5;
 
     &:before {
       transform: scaleX(1);
-      transform-origin: right;
+      transform-origin: left;
     }
   }
 }
