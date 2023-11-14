@@ -17,19 +17,26 @@
         transform: translateY(0);
       }
     }
+
+    &:active {      
+      .destinations-card__inner {
+       background-color: rgba($dark, 0.8);
+      } 
+      .destinations-card__geo {
+        color: rgba($white , 0.6);
+      }
+    }
   }
 
   &__box {
     position: relative;
     border-radius: 24px;
-    background-color: $dark;
     overflow: hidden;
     margin-bottom: 10px;
   }
 
   &__img {
     object-fit: cover;
-
   }
 
   &__title {
@@ -49,7 +56,7 @@
     border-radius: 24px;
     background-color: rgba($dark, 0.6);
     transform: translateY(101%);
-    transition: transform 1s;
+    transition: transform 1s, opacity 1s;
   }
 
   &__inner {
@@ -60,6 +67,7 @@
     padding: 20px 10px;
     background-color: $white;
     border-radius: 9px;
+    transition: background-color 0.3s;
   }
 
   &__geo {
@@ -67,6 +75,7 @@
     font-weight: 200;
     line-height: 1.1;
     margin-bottom: 30px;
+    transition: color 0.3s;
   }
 
   &__list {
