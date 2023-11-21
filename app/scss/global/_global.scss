@@ -75,8 +75,14 @@ main {
   }
 }
 
+.headline {
+  font-size: 22px;
+  line-height: 1.1;
+  font-weight: 200;
+  text-transform: uppercase;
+}
+
 .subtitle {
-  text-align: center;
   font-size: 48px;
   text-transform: uppercase;
   color: $accent;
@@ -88,9 +94,11 @@ main {
   background-size: 80vw;
   padding: 50px 0 70px;
   background-color: $dark;
+  text-align: center;
 
-  &--light {
-    background-color: $light;
+  &--dark {
+    background-color: $dark;
+    color: $light;
   }
 }
 

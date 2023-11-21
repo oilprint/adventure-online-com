@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Agency Adventure Online | 5-Day NYC Tour</title>
+
+  @@include('../components/fonts.html')
+
+  @@include('../components/favicon.html')
+
+  <link rel="stylesheet" href="css/tour.min.css">
+</head>
+
+<body>
+  <!-- @@include('../components/header.html', {
+  "trips": "current"
+  }) -->
+
+  <main>
+
+    <section class="tabs section section--light">
+      <div class="container">
+        <ul class="tabs__nav">
+          <li class="tabs__nav-item active" data-id="tab1">
+            Tour Schedule
+          </li>
+          <li class="tabs__nav-item" data-id="tab2">
+            Where to stay
+          </li>
+          <li class="tabs__nav-item" data-id="tab3">
+            Eat & drink
+          </li>
+          <li class="tabs__nav-item" data-id="tab4">
+            Booking
+          </li>
+        </ul>
+        <div class="tabs__content">
+          <div class="tabs__info active " data-content="tab1">
+            5-Day NYC Tour
+          </div>
+          <div class="tabs__info" data-content="tab2">
+            During our tour, we will be staying at Pod 51 Hotel
+          </div>
+          <div class="tabs__info" data-content="tab3">
+            Breakfasts will be served at Morning Star Cafe
+          </div>
+          <div class="tabs__info" data-content="tab4">
+            Booking Conditions for New York City Tour
+          </div>
+        </div>
+      </div>
+    </section>
+
+    @@include('../components/faq.html')
+
+  </main>
+
+  @@include('../components/footer.html', {
+  "trips": "current"
+  })
+
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>

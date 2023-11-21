@@ -1,0 +1,50 @@
+ .tabs {
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__nav-item {
+    cursor: pointer;
+    width: calc(100% / 4);
+    padding: 0 8px 12px;
+    border-bottom: 1px solid $devider;
+    color: $grey;
+    font-size: 22px;
+    line-height: 1.1;
+    font-weight: 200;
+    text-transform: uppercase;
+    transition: color 0.4s ease-in-out,
+    border-color 0.4s ease-in-out;
+
+    &:hover {
+      border-color: $accent;
+      color: $primary;
+    }
+    
+    &.active {
+      font-weight: 400;
+        color: $primary;
+        border-color: $accent;
+    }
+  }
+
+  &__info {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    font-size: 75px;
+
+    &.active {
+      position: static;
+      opacity: 1;
+      visibility: visible;
+      height: auto;
+    }
+  }
+  
+
+ }

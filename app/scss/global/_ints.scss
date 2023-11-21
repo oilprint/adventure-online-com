@@ -101,3 +101,22 @@
     }
   }
 }
+
+.link-txt {
+  color: $accent;
+  transition: color 0.4s;
+
+  &:focus {
+    outline: solid 1px $accent;
+    border-radius: 4px;
+  }
+
+  &:hover {
+    color: $light;
+  }
+
+  &:active {
+    color: $light;
+    opacity: 0, 5;
+  }
+}
