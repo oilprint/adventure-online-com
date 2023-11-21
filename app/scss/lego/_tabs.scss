@@ -1,50 +1,182 @@
  .tabs {
-  &__nav {
+   background-color: $light;
+   text-align: left;
+
+   &__nav {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+   }
+
+   &__nav-item {
+     cursor: pointer;
+     width: calc(100% / 4);
+     padding: 0 8px 12px;
+     border-bottom: 1px solid $devider;
+     color: $grey;
+     font-size: 22px;
+     line-height: 1.1;
+     font-weight: 200;
+     text-transform: uppercase;
+     transition: color 0.4s ease-in-out,
+       border-color 0.4s ease-in-out;
+
+     &:hover {
+       border-color: $accent;
+       color: $primary;
+     }
+
+     &.active {
+       font-weight: 400;
+       color: $primary;
+       border-color: $accent;
+     }
+   }
+
+   &__info {
+     position: absolute;
+     z-index: -1;
+     opacity: 0;
+     visibility: hidden;
+     height: 0;
+
+     &.active {
+       position: static;
+       opacity: 1;
+       visibility: visible;
+       height: auto;
+       padding-top: 30px;
+     }
+   }
+
+   &__headline {
+     font-size: 72px;
+     margin-bottom: 20px;
+   }
+
+   &__inner {
+     max-width: 640px;
+     width: 100%;
+
+     &--text {
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+     }
+   }
+
+   &__top {
+     display: flex;
+     margin-bottom: 30px;
+   }
+
+   &__title {
+     font-family: 'Rubik',
+       sans-serif;
+     font-size: 32px;
+   }
+
+   &__day {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-  }
+     padding: 6px 20px;
+     border-radius: 8px;
+     background-color: $accent;
+     margin-right: 16px;
+     font-weight: 600;
+   }
 
-  &__nav-item {
-    cursor: pointer;
-    width: calc(100% / 4);
-    padding: 0 8px 12px;
-    border-bottom: 1px solid $devider;
-    color: $grey;
-    font-size: 22px;
-    line-height: 1.1;
-    font-weight: 200;
-    text-transform: uppercase;
-    transition: color 0.4s ease-in-out,
-    border-color 0.4s ease-in-out;
+   &__image {
+     flex-grow: 1;
+     object-fit: cover;
+     border-radius: 0 24px 24px 0;
+   }
 
-    &:hover {
-      border-color: $accent;
-      color: $primary;
-    }
-    
-    &.active {
-      font-weight: 400;
-        color: $primary;
-        border-color: $accent;
-    }
-  }
+   &__item {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     gap: 30px;
 
-  &__info {
-    position: absolute;
-    z-index: -1;
-    opacity: 0;
-    visibility: hidden;
-    height: 0;
-    font-size: 75px;
+     &--left-photo {
+       flex-direction: row-reverse;
 
-    &.active {
-      position: static;
-      opacity: 1;
-      visibility: visible;
-      height: auto;
-    }
-  }
-  
+       .tabs__inner {
+         max-width: 470px;
+       }
 
+       .tabs__image {
+         border-radius: 24px 0 0 24px;
+       }
+     }
+
+     &--top-right {
+       .tabs__image {
+         border-radius: 24px 24px 24px 0;
+       }
+     }
+
+     &--top-left {
+       .tabs__image {
+         border-radius: 24px 24px 0 24px;
+       }
+     }
+
+     &--bottom-left {
+       .tabs__image {
+         border-radius: 24px 0 24px 24px;
+       }
+     }
+
+     &--bottom-right {
+       .tabs__image {
+         border-radius: 0 24px 24px 24px;
+       }
+     }
+   }
+
+   &__text {
+     padding-left: 15px;
+     position: relative;
+     font-size: 18px;
+     font-weight: 400;
+
+     &::before {
+       position: absolute;
+       content: '';
+       width: 8px;
+       height: 8px;
+       border-radius: 50%;
+       background-color: $primary;
+       top: 8px;
+       left: 0;
+     }
+   }
+
+   &__link {
+     margin: auto;
+     color: $accent;
+     margin-top: 30px;
+
+     &::before {
+       background-color: $accent;
+     }
+
+     &:hover {
+       color: $primary;
+     }
+   }
+
+   &__wrapper {
+     column-gap: 50px;
+     column-count: 2;
+     font-size: 24px;
+     font-weight: 600;
+   }
+
+   &__caption {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 4px;
+   }
  }
