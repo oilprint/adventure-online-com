@@ -19,11 +19,39 @@ const swiper = new Swiper('.swiper', {
 });
 
 
+//distination cards blur
+
+const cards = document.querySelectorAll('.destinations-card');
+
+  const blurOtherCards = (card) => {
+    
+    cards.forEach(item => {
+        if (item !== card) {
+            item.classList.add('blur')
+        }
+    });
+};
+
+cards.forEach(card => {
+    card.addEventListener('mouseenter', () => {
+        blurOtherCards(card);
+    });
+    card.addEventListener('mouseleave', () => {
+        cards.forEach(item => {
+            item.classList.remove('blur');
+        });
+    });
+});
+
+
+
+
 function removeClasses(elements, className) {
   for (el of elements) {
     el.classList.remove(className);
   };
 };
+
 
 //tabs
 const tabsNav = document.querySelector('.tabs__nav'),
@@ -50,7 +78,6 @@ console.log(accordion);
 
 accordion.addEventListener('click', (e) => {
   if (e.target.classList.contains('accordion__head')) {
-    console.log('hhhhh');
       toggleAccordionHandler(e.target);
   }
 })
@@ -60,7 +87,6 @@ function toggleAccordionHandler(target) {
   if (accordionItem.classList.contains('open')) {
     accordionItem.classList.remove('open');
   } else {
-    console.log(accordion.children);
     removeClasses(accordion.children, 'open');
     accordionItem.classList.add('open');
   }

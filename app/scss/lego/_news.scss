@@ -2,16 +2,29 @@
 
   &__title {
     margin-bottom: 20px;
+
+    @media (max-width: 1200px) {
+      margin-bottom: 10px;
+    }
+
   }
 
   &__subtitle {
     margin-bottom: 50px;
+
+    @media (max-width: 1200px) {
+      margin-bottom: 20px;
+    }
   }
 
   &__content {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 30px;
+
+    @media (max-width: 768px) {
+      display: block;
+    }
   }
 
   &__item {
@@ -43,11 +56,29 @@
         width: 430px;
         height: 115px;
       }
+
+      @media (max-width: 768px) {
+        display: none;
+      }
     }
 
     &--big {
       grid-column-start: span 2;
     }
+
+    @media (max-width: 768px) {
+      max-width: 100%;
+
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+
   }
 
   &__txt {
@@ -57,7 +88,23 @@
     font-weight: 300;
     text-transform: uppercase;
     color: $primary;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
   }
+
+  &__button {
+
+
+    @media (max-width: 768px) {
+      margin-top: 20px;
+      margin: 0 auto;
+    }
+
+  }
+
+
 }
 
 .news-card {
@@ -70,7 +117,13 @@
   &__inner {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: stretch;
+
+    @media (max-width: 480px) {
+      flex-direction: column;
+      gap: 20px;
+    }
+
   }
 
   &__img-box {
@@ -82,13 +135,28 @@
     overflow: hidden;
     max-width: 250px;
     width: 100%;
+
+    @media (max-width: 768px) {
+      max-width: 40%;
+    }
+
+    @media (max-width: 576px) {
+      max-width: 20%;
+    }
+
+    @media (max-width: 480px) {
+      max-width: 250px;
+    }
   }
 
   &__img {
     object-fit: cover;
+    height: 100%;
   }
 
   &__content {
+    display: flex;
+    flex-direction: column;
     max-width: 446px;
     width: 100%;
     background-repeat: no-repeat;
@@ -97,21 +165,29 @@
   }
 
   &__title {
+    text-align: left;
     max-width: 340px;
     width: 100%;
     margin-bottom: 10px;
+    padding-right: 50px;
     font-size: 37px;
     line-height: 1.1;
     font-weight: 200;
     text-transform: uppercase;
+
+    @media (max-width: 768px) {
+      font-size: 32px;
+    }
   }
 
   &__txt {
     margin-bottom: 18px;
+    text-align: left;
     font-size: 20px;
   }
 
   &__button {
+    text-align: right;
     margin-left: auto;
     width: fit-content;
   }

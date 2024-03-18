@@ -1,11 +1,24 @@
 .book {
+  &__top {
+    padding-bottom: 70px;
 
-  &__title {
-    margin-bottom: 44px;
+    @media (max-width: 1200px) {
+      padding-bottom: 50px;
+    }
   }
 
-  &__button {
-    margin: 0 auto 100px;
+  &__title {
+    margin-bottom: 30px;
+    font-size: 72px;
+
+    @media (max-width: 1200px) {
+      font-size: 56px;
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 42px;
+    }
   }
 }
 
@@ -32,6 +45,16 @@
       rgba($dark, 0.6) 0px -0.5px 0,
       rgba($dark, 0.6) -0.5px 0px 0;
     animation: ticker 15s linear infinite;
+
+    @media (max-width: 1200px) {
+      font-size: 120px;
+      padding: 30px 70px;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 70px;
+      padding: 10px 50px;
+    }
   }
 }
 
