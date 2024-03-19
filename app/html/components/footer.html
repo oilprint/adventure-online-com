@@ -2,19 +2,13 @@
   <div class="container">
     <form class="footer__form subscribe-form" action="#">
       <div class="subscribe-form__inputs">
-        <label class="subscribe-form__label sr-only" for="name">
-          <span class="sr-only">
-            Name
-          </span>
+        <label class="subscribe-form__label" for="name">
+          <input id="name" class="subscribe-form__input" type="text" placeholder="Name" required>
         </label>
-        <input id="name" class="subscribe-form__input" type="text" placeholder="Name" required>
 
-        <label class="subscribe-form__label sr-only" for="e-mail">
-          <span class="sr-only">
-            E-mail
-          </span>
+        <label class="subscribe-form__label" for="e-mail">
+          <input id="e-mail" class="subscribe-form__input" type="email" placeholder="E-mail" name="email" required>
         </label>
-        <input id="e-mail" class="subscribe-form__input" type="email" placeholder="E-mail" name="email" required>
       </div>
 
       <button class="button subscribe-form__button" type="submit">

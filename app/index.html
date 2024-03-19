@@ -74,13 +74,13 @@
 
       <div class="swiper-slide hero__item">
 
-        <div class="hero__layer" style="background-image: url(./images/slider/slide-1/kenai-back.png);"
+        <div class="hero__layer" style="background-image: url('./images/slider/slide-1/kenai-back.png');"
           data-swiper-parallax="76%"></div>
-        <div class="hero__layer" style="background-image: url(./images/slider/slide-1/kenai-middle.png);"
+        <div class="hero__layer" style="background-image: url('./images/slider/slide-1/kenai-middle.png');"
           data-swiper-parallax="70%"></div>
-        <div class="hero__layer" style="background-image: url(./images/slider/slide-1/kenai-second.png);"
+        <div class="hero__layer" style="background-image: url('./images/slider/slide-1/kenai-second.png')"
           data-swiper-parallax="50%"></div>
-        <div class="hero__layer" style="background-image: url(./images/slider/slide-1/kenai-front.png);"
+        <div class="hero__layer" style="background-image: url('./images/slider/slide-1/kenai-front.png')"
           data-swiper-parallax="30%"></div>
         <div class="hero__layer hero__info" data-swiper-parallax="-100%">
           <div class="container hero__container">
@@ -217,7 +217,7 @@
       Choose Adventure
     </h2>
     <h3 class="subtitle category__subtitle">
-      Popular Adventure categorys
+      Popular adventure categories
     </h3>
 
     <ul class="category__list">
@@ -408,7 +408,7 @@
           <a class="destinations-card" href="#">
             <div class="destinations-card__box">
               <img class="destinations-card__img" src="./images/destinations/new-york.jpg" alt="New-York street"
-                width="570" height="300">
+                width="570" height="300" loading="lazy">
               <div class="destinations-card__description">
                 <div class="destinations-card__inner">
                   <h4 class="destinations-card__geo">
@@ -482,7 +482,7 @@
 
             <div class="destinations-card__box">
               <img class="destinations-card__img" src="./images/destinations/toronto.jpg" alt="Toronto street"
-                width="570" height="300">
+                width="570" height="300" loading="lazy">
               <div class="destinations-card__description">
                 <div class="destinations-card__inner">
                   <h4 class="destinations-card__geo">
@@ -558,7 +558,7 @@
 
             <div class="destinations-card__box">
               <img class="destinations-card__img" src="./images/destinations/vegas.jpg" alt="Las-Vegas" width="570"
-                height="300">
+                height="300" loading="lazy">
               <div class="destinations-card__description">
                 <div class="destinations-card__inner">
                   <h4 class="destinations-card__geo">
@@ -634,7 +634,7 @@
 
             <div class="destinations-card__box">
               <img class="destinations-card__img" src="./images/destinations/banff.jpg" alt="Banff Canada" width="570"
-                height="300">
+                height="300" loading="lazy">
               <div class="destinations-card__description">
                 <div class="destinations-card__inner">
                   <h4 class="destinations-card__geo">
@@ -771,14 +771,14 @@
       <div class="news__item">
         <div class="news__info">
           <span class="news__txt">
-            story
+            Story
           </span>
           <span class="news__txt">
-            trips
+            Trips
           </span>
 
           <span class="news__txt">
-            advises
+            Advises
           </span>
           <span class="news__txt">
             Guidance
@@ -819,19 +819,13 @@
   <div class="container">
     <form class="footer__form subscribe-form" action="#">
       <div class="subscribe-form__inputs">
-        <label class="subscribe-form__label sr-only" for="name">
-          <span class="sr-only">
-            Name
-          </span>
+        <label class="subscribe-form__label" for="name">
+          <input id="name" class="subscribe-form__input" type="text" placeholder="Name" required>
         </label>
-        <input id="name" class="subscribe-form__input" type="text" placeholder="Name" required>
 
-        <label class="subscribe-form__label sr-only" for="e-mail">
-          <span class="sr-only">
-            E-mail
-          </span>
+        <label class="subscribe-form__label" for="e-mail">
+          <input id="e-mail" class="subscribe-form__input" type="email" placeholder="E-mail" name="email" required>
         </label>
-        <input id="e-mail" class="subscribe-form__input" type="email" placeholder="E-mail" name="email" required>
       </div>
 
       <button class="button subscribe-form__button" type="submit">

@@ -96,7 +96,6 @@
 
   &__button {
 
-
     @media (max-width: 768px) {
       margin-top: 20px;
       margin: 0 auto;
@@ -146,6 +145,7 @@
 
     @media (max-width: 480px) {
       max-width: 250px;
+      margin: 0 auto;
     }
   }
 
