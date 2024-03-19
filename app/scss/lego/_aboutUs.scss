@@ -1,4 +1,5 @@
 .about {
+
   &__title {
     margin-bottom: 70px;
 
@@ -12,10 +13,15 @@
   }
 
   &__inner {
-    width: calc(100% + 375px);
+    width: 100%;
+  }
+
+  &__gsap {
+    width: 100%;
   }
 
   &__track {
+    width: fit-content;
     will-change: transform;
   }
 
@@ -23,6 +29,19 @@
     display: flex;
     gap: 120px;
     margin-bottom: 60px;
+
+    @media (max-width: 1200px) {
+      gap: 80px;
+      margin-bottom: 40px;
+    }
+
+    @media (max-width: 768px) {
+      margin-bottom: 30px;
+    }
+
+    @media (max-width: 480px) {
+      gap: 40px;
+    }
   }
 
   &__item {
@@ -33,6 +52,16 @@
 
   &__img {
     border-radius: 24px;
+    object-fit: cover;
+    height: auto;
+
+    @media (max-width: 768px) {
+      width: 280px;
+    }
+
+    @media (max-width: 480px) {
+      width: 240px;
+    }
   }
 
   &__content {
@@ -53,17 +82,42 @@
       background-color: $accent;
       border-radius: 12px;
     }
+
+    @media (max-width: 1200px) {
+      width: 450px;
+    }
+
+    @media (max-width: 768px) {
+      width: 400px;
+    }
+
+    @media (max-width: 480px) {
+      width: 320px;
+    }
   }
 
   &__headline {
     display: block;
     font-size: 70px;
     margin-bottom: 20px;
+
+    @media (max-width: 1200px) {
+      font-size: 50px;
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 32px;
+    }
   }
 
   &__bottom {
     display: flex;
     gap: 80px;
+
+    @media (max-width: 480px) {
+      gap: 40px;
+    }
   }
 
   &__links {
@@ -73,11 +127,27 @@
     align-items: flex-start;
     width: 570px;
     flex-shrink: 0;
+
+    @media (max-width: 1200px) {
+      width: 450px;
+    }
+
+    @media (max-width: 768px) {
+      width: 320px;
+    }
   }
 
   &__bottom-first {
     width: 570px;
     flex-shrink: 0;
+
+    @media (max-width: 1200px) {
+      width: 450px;
+    }
+
+    @media (max-width: 768px) {
+      width: 320px;
+    }
   }
 
   &__big-text {
@@ -85,5 +155,14 @@
     font-weight: 300;
     text-transform: uppercase;
     font-size: 40px;
+
+    @media (max-width: 1200px) {
+      font-size: 32px;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 24px;
+    }
+
   }
 }

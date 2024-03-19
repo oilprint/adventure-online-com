@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 
     lenis.on('scroll', (e) => {
-      console.log(e)
+      // console.log(e)
     })
     function raf(time) {
       lenis.raf(time)
@@ -26,9 +26,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
   gsap.registerPlugin(ScrollTrigger);
 
-  	const gsapBl = document.querySelector('.about__container').offsetWidth;
+  	const gsapBl = document.querySelector('.about__gsap').offsetWidth;
 
-    const gsapTrack = document.querySelector('.about__track').offsetWidth;
+    // const gsapTrack = document.querySelector('.about__track').offsetWidth;
+      
+
+
+      let gsapTrack;
+
+      if (window.innerWidth < 480) {
+          gsapTrack = 1250;
+      } else if (window.innerWidth >= 480 && window.innerWidth < 768) {
+          gsapTrack = 1480;
+      } else if (window.innerWidth >= 768 && window.innerWidth < 1200) {
+          gsapTrack = 2160;
+      } else {
+          gsapTrack = 2440;
+      }
+
       console.log(gsapBl);
       console.log(gsapTrack);
       let scrollSliderTransform = gsapTrack - gsapBl
@@ -42,14 +57,14 @@ document.addEventListener('DOMContentLoaded', () => {
           pin: true,
           scrub: true
         },
-        x: '-1210px'
+        x: '-=' + scrollSliderTransform + 'px'
       });
 
 
 	//resize window
-	const debouncedResize = _.debounce(onWindowResize, 500);
+	const debouncedResize = _.debounce(onWindowResize, 700);
 	function onWindowResize() {
 		location.reload();
 	}
-	$(window).on('resize', debouncedResize);
+	window.addEventListener('resize', debouncedResize);
 })
