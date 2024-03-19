@@ -103,6 +103,10 @@ main {
   @media(max-width: 768px) {
     padding-bottom: 50px;
   }
+
+  @media(max-width: 375px) {
+    padding-top: 30px;
+  }
 }
 
 .social {

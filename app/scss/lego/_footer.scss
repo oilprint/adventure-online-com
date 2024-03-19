@@ -2,6 +2,16 @@
   background-color: $dark;
   padding: 70px 0 30px;
 
+  @media(max-width: 768px) {
+    padding-top: 50px;
+  }
+
+  @media(max-width: 375px) {
+    padding-top: 30px;
+  }
+
+
+
   &__form {
     margin-bottom: 70px;
   }
