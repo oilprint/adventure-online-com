@@ -8,36 +8,37 @@
   <title>Travel Agency Adventure Online | Home Page</title>
 
   @@include('../components/fonts.html')
-  
+
   @@include('../components/favicon.html')
 
   <link rel="stylesheet" href="css/index.min.css">
 </head>
 
 <body>
-  @@include('../components/header.html', {
-  "home": "current"
-  })
+  <div class="wrapper">
+    @@include('../components/header.html', {
+    "home": "current"
+    })
 
-  <main>
-    
-    <h1 class="sr-only">
-      Discover Your Dream Destinations with Adventure-online
-    </h1>
-   
-    @@include('../components/hero.html')
-    @@include('../components/category.html')
+    <main>
 
-    @@include('../components/destinations.html')
-    @@include('../components/news.html')
-    
-    @@include('../components/book.html')
-  </main>
+      <h1 class="sr-only">
+        Discover Your Dream Destinations with Adventure-online
+      </h1>
 
-  @@include('../components/footer.html', {
-  "home": "current"
-  })
+      @@include('../components/hero.html')
+      @@include('../components/category.html')
 
+      @@include('../components/destinations.html')
+      @@include('../components/news.html')
+
+      @@include('../components/book.html')
+    </main>
+
+    @@include('../components/footer.html', {
+    "home": "current"
+    })
+  </div>
   <script src="js/main.min.js"></script>
 </body>
 

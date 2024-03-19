@@ -23,6 +23,14 @@ main {
   flex-grow: 1;
 }
 
+.wrapper {
+  overflow-x: hidden;
+
+  &.lock {
+    overflow-y: hidden;
+  }
+}
+
 .container {
   z-index: 2;
   max-width: 1200px;
@@ -43,6 +51,7 @@ main {
 }
 
 @import 'lego/header';
+@import 'lego/mobile';
 @import 'lego/footer';
 @import 'lego/menu';
 

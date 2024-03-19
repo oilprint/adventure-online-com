@@ -20,7 +20,70 @@
 </head>
 
 <body>
-  
+  <header class="header">
+  <div class="container header__container">
+
+    <div class="header__inner">
+      <a href="#" class="logo header__logo">
+        <img class="logo__img" src="./images/logo.svg" alt="Logo Adventure Online">
+      </a>
+
+      <button class="header__btn mobile-btn mobile-btn--open" type="button" data-burger-open>
+        <span class=" sr-only">Open menu</span>
+        <svg class="mobile-btn__icon" width="44" height="44">
+          <use href="./images/symbol-defs.svg#icon-open-menu"></use>
+        </svg>
+      </button>
+      <nav class="header__nav">
+        <ul class="menu header__menu">
+          <li class="menu__item">
+            <a class="menu__link @@home" href="#">
+              Home
+            </a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link current" href="tour.html">
+              Your trips
+            </a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link @@stories" href="#">
+              Stories
+            </a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link @@guide" href="#">
+              Smart guide
+            </a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link @@contact" href="#">
+              Contact
+            </a>
+          </li>
+        </ul>
+
+        <button class="button" type="button">
+          Contact Us
+        </button>
+      </nav>
+
+      <button class="mobile-menu__button mobile-btn hide" type="button" data-burger-close>
+        <span class=" sr-only">Close menu</span>
+        <svg class="mobile-btn__icon" width="22" height="22">
+          <use href="./images/symbol-defs.svg#icon-close-menu"></use>
+        </svg>
+      </button>
+
+    </div>
+
+
+
+
+
+
+  </div>
+</header>
 
   <main>
 
@@ -314,8 +377,8 @@
                   The full payment for the tour is due 14 days before the tour start date.
                 </p>
                 <p class="tabs__text">
-                 Failure to complete the payment by the specified date may result in the cancellation of the
-                 reservation.
+                  Failure to complete the payment by the specified date may result in the cancellation of the
+                  reservation.
                 </p>
               </li>
               <li class="tabs__inner">
@@ -346,13 +409,13 @@
                   Travel Insurance:
                 </h4>
                 <p class="tabs__text">
-                 We strongly recommend purchasing comprehensive travel insurance to cover unforeseen circumstances,
-                 including trip cancellations, interruptions, or medical emergencies.
+                  We strongly recommend purchasing comprehensive travel insurance to cover unforeseen circumstances,
+                  including trip cancellations, interruptions, or medical emergencies.
                 </p>
               </li>
               <li class="tabs__inner tabs__inner--text">
                 <h4 class="tabs__caption">
-                Tour Itinerary:
+                  Tour Itinerary:
                 </h4>
                 <p class="tabs__text">
                   The tour itinerary is subject to change based on factors such as weather conditions and unforeseen
@@ -360,15 +423,15 @@
                 </p>
               </li>
 
-               <li class="tabs__inner tabs__inner--text">
-                 <h4 class="tabs__caption">
-                   Responsibility:
-                 </h4>
-                 <p class="tabs__text">
-                   Adventure-online reserves the right to alter the itinerary, accommodations, or included activities
-                   if necessary, while ensuring the overall quality of the tour.
-                 </p>
-               </li>
+              <li class="tabs__inner tabs__inner--text">
+                <h4 class="tabs__caption">
+                  Responsibility:
+                </h4>
+                <p class="tabs__text">
+                  Adventure-online reserves the right to alter the itinerary, accommodations, or included activities
+                  if necessary, while ensuring the overall quality of the tour.
+                </p>
+              </li>
             </ol>
             <a class="link tabs__link" href="#">
               Contact us
