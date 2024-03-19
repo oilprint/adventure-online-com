@@ -30,8 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // const gsapTrack = document.querySelector('.about__track').offsetWidth;
       
-
-
       let gsapTrack;
 
       if (window.innerWidth < 480) {
@@ -62,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 	//resize window
-	const debouncedResize = _.debounce(onWindowResize, 700);
+	const debouncedResize = _.debounce(onWindowResize, 500);
 	function onWindowResize() {
 		location.reload();
 	}
