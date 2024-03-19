@@ -1,0 +1,107 @@
+.faq {
+  &__subtitle {
+    margin-bottom: 70px;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__image {
+    max-width: 430px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: contain;
+    background-image: url('../images/new-york/faq.jpg');
+    border-radius: 24px;
+  }
+
+  &__accordion {
+    position: relative;
+    margin-left: auto;
+    max-width: 700px;
+    width: 100%;
+
+    &::before {
+      position: absolute;
+      content: '';
+      width: 430px;
+      height: 277px;
+      top: 0;
+      left: -470px;
+      border-radius: 14px;
+      background-repeat: no-repeat;
+      background-position: left top;
+      background-size: cover;
+      background-image: url('./../images/new-york/faq.jpg');
+    }
+  }
+}
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  &__item {
+    padding: 10px;
+    border-bottom: 1px solid $devider;
+
+    &.open {
+      .accordion__head {
+        color: $light;
+        margin-bottom: 20px;
+      }
+
+      .accordion__icon {
+        transform: rotate(0);
+      }
+
+      .accordion__body {
+        visibility: visible;
+        opacity: 1;
+        height: auto;
+      }
+    }
+
+    &:hover {
+      border-bottom-color: $accent;
+
+      .accordion__head {
+        color: $accent;
+      }
+    }
+  }
+
+  &__head {
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    font-size: 32px;
+    transition: color 0.4s ease-in-out;
+  }
+
+  &__icon {
+    width: 32px;
+    height: 32px;
+    transform: rotate(180deg);
+    fill: currentColor;
+    transition: transform 0.4s ease-in-out, fill 0.4s easy-in-out;
+  }
+
+  &__body {
+    text-align: left;
+    font-size:22px;
+    font-weight: 200;
+    line-height: 1.5;
+    color: $light;
+    height: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.15s ease-in-out;
+  }
+
+}

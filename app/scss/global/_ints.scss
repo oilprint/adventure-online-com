@@ -23,12 +23,11 @@
 }
 
 .button {
-  display: block;
-  width: fit-content;
+  display: inline-block;
+  flex-shrink: 0;
   padding: 18px 36px;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
-  line-height: 1;
   text-transform: uppercase;
   border-radius: 12px;
   color: $dark;
@@ -56,8 +55,8 @@
 
 .link {
   position: relative;
-  display: block;
-  width: fit-content;
+  display: inline-block;
+  flex-shrink: 0;
   font-size: 22px;
   font-weight: 200;
   text-transform: uppercase;
@@ -72,7 +71,7 @@
     left: 0;
     bottom: -4px;
     background-color: rgba($white, 0.5);
-    transform-origin: right;
+    transform-origin: left;
     transform: scaleX(1);
     transition: transform 0.4s ease-in-out;
   }
@@ -87,7 +86,7 @@
 
     &::before {
       transform: scaleX(0);
-      transform-origin: left;
+      transform-origin: right;
     }
   }
 
@@ -99,5 +98,24 @@
       transform: scaleX(1);
       transform-origin: right;
     }
+  }
+}
+
+.link-txt {
+  color: $accent;
+  transition: color 0.4s;
+
+  &:focus {
+    outline: solid 1px $accent;
+    border-radius: 4px;
+  }
+
+  &:hover {
+    color: $light;
+  }
+
+  &:active {
+    color: $light;
+    opacity: 0, 5;
   }
 }

@@ -17,3 +17,78 @@ const swiper = new Swiper('.swiper', {
         enabled: true,
       },
 });
+
+
+//distination cards blur
+
+const cards = document.querySelectorAll('.destinations-card');
+
+  const blurOtherCards = (card) => {
+    
+    cards.forEach(item => {
+        if (item !== card) {
+            item.classList.add('blur')
+        }
+    });
+};
+
+cards.forEach(card => {
+    card.addEventListener('mouseenter', () => {
+        blurOtherCards(card);
+    });
+    card.addEventListener('mouseleave', () => {
+        cards.forEach(item => {
+            item.classList.remove('blur');
+        });
+    });
+});
+
+
+
+
+function removeClasses(elements, className) {
+  for (el of elements) {
+    el.classList.remove(className);
+  };
+};
+
+
+//tabs
+const tabsNav = document.querySelector('.tabs__nav'),
+      tabsContent = document.querySelector('.tabs__content');
+
+function clickOnTabHandler(target) {
+  removeClasses(tabsNav.children, 'active');
+  removeClasses(tabsContent.children, 'active');
+  target.classList.add('active');
+  const contentItem = tabsContent.querySelector(`[data-content="${target.dataset.id}"]`);
+  contentItem.classList.add('active');
+};
+
+tabsNav.addEventListener('click', (e) => {
+  if (e.target.classList.contains('tabs__nav-item')) {
+    clickOnTabHandler(e.target);
+  }
+});
+
+
+//accordion
+const accordion = document.querySelector('.faq__accordion');
+console.log(accordion);
+
+accordion.addEventListener('click', (e) => {
+  if (e.target.classList.contains('accordion__head')) {
+      toggleAccordionHandler(e.target);
+  }
+})
+
+function toggleAccordionHandler(target) {
+  const accordionItem = target.closest('.accordion__item');
+  if (accordionItem.classList.contains('open')) {
+    accordionItem.classList.remove('open');
+  } else {
+    removeClasses(accordion.children, 'open');
+    accordionItem.classList.add('open');
+  }
+
+}

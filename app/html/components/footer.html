@@ -1,19 +1,15 @@
 <footer class="footer">
   <div class="container">
     <form class="footer__form subscribe-form" action="#">
-      <label class="subscribe-form__label" for="name">
-        <span class="sr-only">
-          Name
-        </span>
-      </label>
-      <input id="name" class="subscribe-form__input" type="text" placeholder="Name" required>
+      <div class="subscribe-form__inputs">
+        <label class="subscribe-form__label" for="name">
+          <input id="name" class="subscribe-form__input" type="text" placeholder="Name" required>
+        </label>
 
-      <label class="subscribe-form__label" for="e-mail">
-        <span class="sr-only">
-          E-mail
-        </span>
-      </label>
-      <input id="e-mail" class="subscribe-form__input" type="email" placeholder="E-mail" name="email" required>
+        <label class="subscribe-form__label" for="e-mail">
+          <input id="e-mail" class="subscribe-form__input" type="email" placeholder="E-mail" name="email" required>
+        </label>
+      </div>
 
       <button class="button subscribe-form__button" type="submit">
         subscribe
@@ -34,7 +30,7 @@
         <a class="footer__address-link footer__address-link--big" href="tel:+12085550112">
           (208) 555-0112
         </a>
-        <a class="footer__address-link" href="mailto:info@dolguldur.com">
+        <a class="footer__address-link" href="mailto:info@adv.com">
           <svg class="footer__address-icon" width="20" height="20">
             <use href="./images/symbol-defs.svg#icon-mail"></use>
           </svg>
@@ -42,7 +38,7 @@
         </a>
       </address>
 
-      <div class="social">
+      <div class="social footer__social">
         <h2 class="social__title">
           Join us
         </h2>

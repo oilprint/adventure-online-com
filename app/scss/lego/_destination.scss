@@ -1,6 +1,7 @@
 .destinations-card {
   max-width: 570px;
   width: 100%;
+  transition: filter 0.3s ease;
 
   &:focus {
     .destinations-card__description {
@@ -24,13 +25,21 @@
 
   &__img {
     object-fit: cover;
-
+    height: auto;
   }
 
   &__title {
     font-size: 50px;
     font-weight: 200;
     line-height: 1.1;
+
+    @media (max-width: 992px) {
+      font-size: 40px;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 32px;
+    }
   }
 
   &__description {
@@ -133,25 +142,47 @@
 
   &__icon {
     fill: $primary;
+    width: 32px;
+    height: 32px;
+  }
+
+  &.blur {
+    filter: blur(3px);
   }
 }
+
+
 
 .destinations {
 
   &__title {
     margin-bottom: 70px;
+
+    @media (max-width: 1200px) {
+      margin-bottom: 30px;
+    }
   }
 
   &__list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
-    margin-bottom: 70px;
+    margin-bottom: 50px;
+
+    @media (max-width: 992px) {
+      margin-bottom: 20px;
+    }
   }
 
   &__link {
     display: block;
     margin: 0 auto;
     width: fit-content;
+  }
+
+  &__icon {
+    fill: $primary;
+    width: 32px;
+    height: 32px;
   }
 }

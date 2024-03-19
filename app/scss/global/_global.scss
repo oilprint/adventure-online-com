@@ -46,19 +46,6 @@ main {
 @import 'lego/footer';
 @import 'lego/menu';
 
-.section {
-  background-repeat: no-repeat;
-  background-position: top 10px center;
-  background-size: 80vw;
-
-  padding: 50px 0 70px;
-  background-color: $dark;
-
-  &--light {
-    background-color: $light;
-  }
-}
-
 .title {
   font-family: 'Rubik',
     sans-serif;
@@ -73,13 +60,27 @@ main {
     color: $primary;
     font-weight: 500;
   }
+
+  @media (max-width: 1200px) {
+    font-size: calc(36px + (90 - 36) * ((100vw - 360px) / (1200 - 360)));
+  }
+}
+
+.headline {
+  font-size: 22px;
+  line-height: 1.1;
+  font-weight: 200;
+  text-transform: uppercase;
 }
 
 .subtitle {
-  text-align: center;
   font-size: 48px;
   text-transform: uppercase;
   color: $accent;
+
+  @media (max-width: 1200px) {
+    font-size: calc(24px + (48 - 24) * ((100vw - 360px) / (1200 - 360)));
+  }
 }
 
 .section {
@@ -88,9 +89,19 @@ main {
   background-size: 80vw;
   padding: 50px 0 70px;
   background-color: $dark;
+  text-align: center;
 
   &--light {
     background-color: $light;
+  }
+
+  &--dark {
+    background-color: $dark;
+    color: $light;
+  }
+
+  @media(max-width: 768px) {
+    padding-bottom: 50px;
   }
 }
 
@@ -153,4 +164,8 @@ main {
       }
     }
   }
+}
+
+.text-bold {
+  font-weight: 600;
 }

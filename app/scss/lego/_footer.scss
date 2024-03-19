@@ -8,15 +8,24 @@
 
   &__content {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: start;
-    gap: 30px;
+    gap: 50px;
     margin-bottom: 30px;
+
+    @media(max-width: 480px) {
+      gap: 30px;
+    }
   }
 
   &__address {
     display: flex;
     flex-direction: column;
+
+    @media (max-width: 480px) {
+      width: 100%;
+    }
   }
 
   &__geo {
@@ -74,27 +83,44 @@
   &__address-icon {
     fill: currentColor;
     margin-right: 8px;
+
     transition: fill 0.4s;
   }
 
+  &__social {
+
+    @media (max-width: 480px) {
+      width: 100%;
+    }
+  }
+
   &__menu {
+    flex-wrap: wrap;
     margin: 0 auto;
     margin-bottom: 50px;
-    color: rgba($light, 0.4)
+    color: rgba($light, 0.4);
+
+    @media (max-width: 576px) {
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      overflow-y: scroll;
+      padding-bottom: 10px;
+      -webkit-padding-bottom: 10px;
+    }
   }
 
   &__bottom {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
   }
 
   &__info {
     display: flex;
     align-items: center;
-  }
-
-  &__text {
-    margin-right: 30px;
+    flex-wrap: wrap;
+    gap: 8px;
   }
 
   &__links {
@@ -104,18 +130,18 @@
   &__links-item {
     position: relative;
 
-    &::before {
-      position: absolute;
-      content: '';
-      width: 2px;
-      height: 16px;
-      background-color: $primary;
-      top: 4px;
-      left: -15px;
-    }
-
     &:not(:last-child) {
       margin-right: 30px;
+
+      &::before {
+        position: absolute;
+        content: '';
+        width: 2px;
+        height: 16px;
+        background-color: $primary;
+        top: 4px;
+        right: -15px;
+      }
     }
   }
 
@@ -142,13 +168,30 @@
   display: flex;
   align-items: stretch;
   justify-content: center;
+  gap: 20px;
+
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+  }
+
+  &__inputs {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 20px;
+
+    @media (max-width: 480px) {
+      flex-wrap: wrap;
+      align-items: center;
+    }
+  }
 
   &__input {
+    flex-grow: 1;
     border-radius: 12px;
     background-color: $light;
     color: $primary;
     padding: 20px;
-    margin-right: 30px;
     max-width: 300px;
     width: 100%;
     transition: outline 0.4s ease-in-out;
