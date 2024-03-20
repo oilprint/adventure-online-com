@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const closeBtn = document.querySelector('[data-burger-close]');
   const menu = document.querySelector('.header__nav');
   const wrapper = document.querySelector('.wrapper');
-  console.log(closeBtn);
 
   openBtn.addEventListener('click', () => {
     console.log("click");
@@ -12,15 +11,51 @@ document.addEventListener('DOMContentLoaded', () => {
     closeBtn.classList.remove('hide');
     menu.classList.add('open');
     wrapper.classList.add('lock');
+    document.querySelector('html').classList.add('lock');
   });
 
   closeBtn.addEventListener('click', () => {
     openBtn.classList.remove('hide');
     closeBtn.classList.add('hide');
     menu.classList.remove('open');
+    document.querySelector('html').classList.remove('lock');
     wrapper.classList.remove('lock');
   });
 
+
+  //modal
+  const modalButton = document.querySelector('[data-modal-button]');
+  const modalClosebutton = document.querySelector('[data-modal-close]');
+  const modal = document.querySelector('[data-modal]');
+  
+  modalButton.addEventListener('click', () => {  
+    console.log('open');
+    modal.classList.remove('hidden');
+    wrapper.classList.add('lock');
+    document.querySelector('html').classList.add('lock');
+  });
+
+  // close 
+  
+  modalClosebutton.addEventListener('click', function () {
+    console.log('close');
+    const modal = this.closest('[data-modal]');
+    modal.classList.add('hidden');
+    wrapper.classList.remove('lock');
+    document.querySelector('html').classList.remove('lock');
+  })
+  // Закрытие по клику по всему экрану
+  modal.addEventListener('click', function () {
+    this.classList.add('hidden');
+    wrapper.classList.remove('lock');
+    document.querySelector('html').classList.remove('lock');
+  })
+
+
+  //end modal
+
+
+  //swiper
 
   const swiper1 = new Swiper('.swiper-1', {
     speed: 1500,

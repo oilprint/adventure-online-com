@@ -2,8 +2,6 @@
 @import 'global/vars';
 @import 'global/ints';
 
-
-
 body {
   display: flex;
   flex-direction: column;
@@ -15,15 +13,17 @@ body {
   overflow-x: hidden;
   background-color: $light;
   scroll-behavior: smooth;
+}
 
+html {
   &.lock {
-    overflow-y: hidden;
+    background-color: red;
+    height: 100%;
   }
 }
 
 .wrapper {
   width: 100%;
-  // height: auto;
   overflow-x: hidden;
 
   &.lock {
@@ -51,6 +51,7 @@ body {
 
 @import 'lego/header';
 @import 'lego/mobile';
+@import 'lego/modal';
 @import 'lego/menu';
 @import 'lego/footer';
 

@@ -1,0 +1,132 @@
+.backdrop {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  background-color: rgba($dark, 0.3);
+  backdrop-filter: blur(1px);
+  transition: opacity 0.5s;
+
+  &.hidden {
+    opacity: 0;
+    pointer-events: none;
+
+    .modal {
+      transform: scale(0);
+    }
+  }
+}
+
+.modal {
+  position: relative;
+  max-width: 715px;
+  width: 100%;
+  padding: 30px 20px;
+  background-color: $light;
+  border-radius: 14px;
+  box-shadow: 8px 8px 3px rgba(0, 0, 0, 0.12);
+  transform: scale(1);
+  margin: auto;
+  height: auto;
+
+  scroll-behavior: smooth;
+  transition: transform 0.5s;
+
+  &--small {
+    max-width: 400px;
+    text-align: left;
+    background-color: $light;
+  }
+
+  @media (max-width: 768px) {
+    width: 95vw;
+  }
+
+  @media (max-width: 576px) {
+    margin: 20px auto;
+    overflow-y: scroll;
+  }
+
+  &__close-btn {
+    position: absolute;
+    padding: 4px;
+    top: 10px;
+    right: 10px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: border 0.4s,
+      background-color 0.4s;
+
+    &:focus {
+      border: 1px solid $accent;
+    }
+
+    &:hover {
+      background-color: $light;
+
+      .modal__close-btn-icon {
+        fill: $accent;
+      }
+    }
+
+    &:active {
+      background-color: $primary;
+
+      .modal__close-btn-icon {
+        fill: $light;
+      }
+    }
+  }
+
+  &__close-btn-icon {
+    fill: $grey;
+    transition: fill 0.4s;
+  }
+}
+
+.appointment {
+  &__headline {
+    font-size: 32px;
+    text-transform: uppercase;
+    color: $dark;
+    margin-bottom: 20px;
+  }
+}
+
+.messengers {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: color 0.3s ease, outline 0.3s ease;
+
+    &:focus {
+      outline: solid 1px $accent;
+      outline-offset: 4px;
+    }
+
+    &:hover {
+      color: $accent;
+    }
+
+    &:active {
+      color: $secondary;
+    }
+  }
+
+  &__icon {
+    fill: currentColor;
+    width: 24px;
+    height: 24px;
+    transition: fill 0.3s ease;
+  }
+}
