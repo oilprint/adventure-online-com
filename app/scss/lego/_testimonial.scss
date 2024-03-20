@@ -1,225 +1,176 @@
-.destinations-card {
-  max-width: 570px;
-  width: 100%;
-  transition: filter 0.3s ease;
+.testimonial {
+  background-size: 60vw;
 
-  &:focus {
-    .destinations-card__description {
-      transform: translateY(0);
-    }
+  @media (max-width: 480px) {
+    background-size: 60vw;
   }
 
-  &:hover {
-    .destinations-card__description {
-      transform: translateY(0);
-    }
-  }
+  &__content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 30px;
 
-  @media (max-width: 1200px) {
-    &:hover {
-      .destinations-card__box {
-        outline: solid 1px $accent;
-      }
-
-      .destinations-card__title {
-        color: $accent;
-      }
-
-      .destinations-card__description {
-        transform: translateY(101%);
-      }
-    }
-  }
-
-  &__box {
-    position: relative;
-    border-radius: 24px;
-    background-color: $dark;
-    overflow: hidden;
-    margin-bottom: 10px;
-    transition: outline 0.3s ease;
-
-    @media (max-width: 992px) {
-      margin-bottom: 4px;
-    }
-
-    @media (max-width: 375px) {
-      border-radius: 16px;
+    @media (max-width: 768px) {
+      // flex-direction: column;
     }
   }
 
   &__img {
-    object-fit: cover;
-    height: auto;
-  }
-
-  &__title {
-    font-size: 50px;
-    text-align: left;
-    font-weight: 200;
-    line-height: 1.1;
-    transition: color 0.3s ease;
-
-    @media (max-width: 992px) {
-      font-size: 40px;
-    }
-
-    @media (max-width: 576px) {
-      font-size: 32px;
-    }
-  }
-
-  &__description {
-    position: absolute;
-    z-index: 1;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 15px;
-    background-color: $dark;
     border-radius: 24px;
-    transform: translateY(101%);
-    transition: transform 0.8s;
+    width: 100%;
+    object-fit: cover;
+
+    @media (max-width: 768px) {
+      width: 200px;
+      height: 200px;
+    }
   }
 
-  &__inner {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-    padding: 20px 10px;
-    background-color: $white;
-    border-radius: 9px;
+  &__info {
+    max-width: 570px;
+    width: 100%;
+    padding: 30px 0;
+    text-align: left;
+
+    @media (max-width: 768px) {
+      padding: 0;
+    }
   }
 
-  &__geo {
-    font-size: 50px;
+  &__name {
+    display: block;
     font-weight: 200;
-    line-height: 1.1;
-    margin-bottom: 30px;
-  }
-
-  &__list {
-    display: flex;
-    margin-bottom: 30px;
-  }
-
-  &__item {
-    padding: 7px 10px;
-    background-color: $light;
-    display: flex;
-    flex-direction: column;
-
-    &--accent {
-      position: relative;
-      background-color: $accent;
-      color: $light;
-
-      &::before {
-        position: absolute;
-        content: '';
-        top: 0;
-        right: -10px;
-        bottom: 0;
-        width: 0;
-        height: 0;
-        border: 0 solid transparent;
-        border-bottom-width: 28px;
-        border-top-width: 28px;
-        border-left: 10px solid $accent;
-      }
-    }
-
-    &:not(:last-child) {
-      margin-right: 10px;
-    }
-
-    &:first-child {
-      margin-right: 20px;
-    }
-  }
-
-  &__subtitle {
-    font-size: 12px;
-    font-weight: 500;
+    font-size: 70px;
     text-transform: uppercase;
+    margin-bottom: 20px;
+
+    @media (max-width: 768px) {
+      font-size: 40px;
+      margin-bottom: 8px;
+    }
   }
 
   &__txt {
-    font-size: 24px;
-    line-height: 1.1;
-    text-transform: uppercase;
-    font-weight: 600;
+    position: relative;
+    padding-top: 70px;
+    display: block;
+
+    &::before {
+      position: absolute;
+      content: "";
+      background-image: url("../images/decor/bracket.svg");
+      top: 0;
+      left: 0;
+      width: 40px;
+      height: 34px;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      background-image: url("../images/decor/bracket.svg");
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      bottom: -34px;
+      right: 0;
+      width: 40px;
+      height: 34px;
+      transform: rotate(180deg);
+    }
+
+    @media (max-width: 768px) {
+      padding-top: 40px;
+
+      &::after,
+      &::before {
+        transform: scale(0.8);
+      }
+    }
   }
 
-  &__icons {
+  &__swiper-bottom {
+    position: absolute;
+    z-index: 10;
     display: flex;
-    column-gap: 30px;
-  }
-
-  &__icons-item {
-    display: flex;
-    justify-content: center;
     align-items: center;
-    padding: 6px;
-    border: 1px solid $primary;
-    border-radius: 4px;
+    gap: 40px;
+    bottom: 30px;
+    right: 25%;
+    font-size: 30px;
+    font-weight: 200;
+
+    @media (max-width: 768px) {
+      position: static;
+      justify-content: center;
+    }
   }
 
-  &__icon {
-    fill: $primary;
-    width: 32px;
-    height: 32px;
-  }
-
-  &.blur {
-    filter: blur(3px);
-  }
-}
-
-
-
-.destinations {
-
-  &__title {
-    margin-bottom: 50px;
-
-    @media (max-width: 1200px) {
+  &__wrapper {
+    @media (max-width: 768px) {
       margin-bottom: 30px;
     }
 
     @media (max-width: 480px) {
-      margin-bottom: 16px;
+      margin-bottom: 50px;
     }
   }
 
-  &__list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-    margin-bottom: 50px;
+}
 
-    @media (max-width: 992px) {
-      margin-bottom: 20px;
-    }
+.swiper__buttons {
+  display: flex;
+  gap: 20px;
+  cursor: pointer;
+  bottom: 30px;
+  right: 25%;
+}
 
-    @media (max-width: 576px) {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
+.swiper-button-next {
+  transform: rotate(180deg);
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  display: none;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $secondary;
+  transition: color 0.3s ease;
+
+  &:focus {
+    padding: 4px 0;
+    outline: solid 1px $accent;
+    outline-offset: 2px;
+    border-radius: 4px;
   }
 
-  &__link {
-    display: block;
-    margin: 0 auto;
-    width: fit-content;
+  &:hover {
+    color: $accent;
   }
 
-  &__icon {
-    fill: $primary;
-    width: 32px;
-    height: 32px;
+  &:active {
+    background-color: rgba($dark, 0.1);
   }
+}
+
+.swiper-button-next {
+  transform: rotate(180deg);
+}
+
+.swiper-button-icon {
+  fill: currentColor;
+  width: 70px;
+  height: 11px;
+  transition: fill 0.3s ease;
+}
+
+.swiper-pagination-current {
+  font-weight: 300;
 }

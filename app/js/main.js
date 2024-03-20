@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 
-  const swiper = new Swiper('.swiper', {
+  const swiper1 = new Swiper('.swiper-1', {
     speed: 1500,
     loop: true,
     grabCursor: true,
@@ -40,6 +40,33 @@ document.addEventListener('DOMContentLoaded', () => {
     keyboard: {
           enabled: true,
         },
+  });
+
+  const swiper2 = new Swiper('.swiper-2', {
+     slidesPerView: 1,
+    spaceBetween: 200,
+    loop: true,
+     autoplay: {
+      delay: 5000,
+    },
+
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      }, 
+
+    // If we need pagination
+    pagination: {
+        el: ".swiper-pagination",
+        type: "fraction",
+      },
+  });
+
+  //logo footer
+  const logoFooter = document.querySelector('.footer__logo')
+  
+  logoFooter.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 
 

@@ -105,7 +105,8 @@
   }
 
   &__menu {
-    flex-wrap: wrap;
+    flex-direction: row;
+    // flex-wrap: wrap;
     margin: 0 auto;
     margin-bottom: 50px;
     color: rgba($light, 0.4);
@@ -116,6 +117,15 @@
       overflow-y: scroll;
       padding-bottom: 10px;
       -webkit-padding-bottom: 10px;
+    }
+
+    &.menu__item {
+      flex-shrink: 0;
+      width: fit-content;
+    }
+
+    &__link {
+      width: fit-content;
     }
   }
 

@@ -25,7 +25,7 @@
   <div class="container header__container">
 
     <div class="header__inner">
-      <a href="#" class="logo header__logo">
+      <a href="index.html" class="logo header__logo">
         <img class="logo__img" src="./images/logo.svg" alt="Logo Adventure Online">
       </a>
 
@@ -36,10 +36,15 @@
         </svg>
       </button>
       <nav class="header__nav">
-        <ul class="menu header__menu">
+        <ul class="menu header__menu menu--mobile">
           <li class="menu__item">
-            <a class="menu__link current" href="#">
+            <a class="menu__link current" href="index.html">
               Home
+            </a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link @@about" href="tour.html">
+              About Us
             </a>
           </li>
           <li class="menu__item">
@@ -48,17 +53,12 @@
             </a>
           </li>
           <li class="menu__item">
-            <a class="menu__link @@stories" href="#">
+            <a class="menu__link @@guide" href="tour.html">
               Stories
             </a>
           </li>
           <li class="menu__item">
-            <a class="menu__link @@guide" href="#">
-              Smart guide
-            </a>
-          </li>
-          <li class="menu__item">
-            <a class="menu__link @@contact" href="#">
+            <a class="menu__link @@contact" href="tour.html">
               Contact
             </a>
           </li>
@@ -93,7 +93,7 @@
       </h1>
 
       <section class="hero">
-  <div class="swiper hero__inner ">
+  <div class="swiper hero__inner swiper-1">
     <div class="swiper-wrapper hero__wrapper">
 
       <div class="swiper-slide hero__item">
@@ -1030,19 +1030,133 @@
 
   </div>
 </section>
-      <section class="section destinations section--light"
-  style="background-image: url(./images/decor/decor-destinations.png);">
-  <div class="destination__wrapper">
-    <div class="container">
-      <h2 class="title title--light destinations__title">
-        Testimonial
-      </h2>
+      <section class="section testimonial section--light"
+  style="background-image: url(./images/decor/decor-testimonial.png);">
 
+  <div class="container">
+    <h2 class="title title--light destinations__title">
+      Travelers' Stories
+    </h2>
+
+    <div class="testimonial__inner swiper swiper-2" id="swiper-2">
+
+      <div class="swiper-wrapper testimonial__wrapper">
+        <div class="swiper-slide testimonial__item">
+          <blockquote class="testimonial__content">
+            <div class="testimonial__img-box">
+              <img class="testimonial__img" src="./images/testimonials/review-01.webp" alt="" loading="lazy" width="500"
+                height="630">
+            </div>
+            <div class="testimonial__info">
+              <span class="testimonial__name">
+                Daniel
+              </span>
+              <p class="testimonial__txt">
+                Visiting Germany was an amazing experience! From the rich history of Berlin to the charming streets of
+                Munich and the stunning beauty of the Bavarian Alps, every moment was filled with wonder. The
+                hospitality, culture, and cuisine made this trip unforgettable.
+              </p>
+            </div>
+          </blockquote>
+        </div>
+
+        <div class="swiper-slide testimonial__item">
+          <blockquote class="testimonial__content">
+            <div class="testimonial__img-box">
+              <img class="testimonial__img" src="./images/testimonials/review-04.webp" alt="Our cusromers in New-York"
+                loading="lazy" width="500" height="630">
+            </div>
+            <div class="testimonial__info">
+              <span class="testimonial__name">
+                Emily
+              </span>
+              <p class="testimonial__txt">
+                Absolutely amazing experience with this agency! They helped me plan a fantastic road trip visiting
+                iconic destinations like New York City, the Grand Canyon. Everything was
+                well-organized and hassle-free. Highly recommend!
+              </p>
+            </div>
+          </blockquote>
+        </div>
+
+        <div class="swiper-slide testimonial__item">
+          <blockquote class="testimonial__content">
+            <div class="testimonial__img-box">
+              <img class="testimonial__img" src="./images/testimonials/review-02.webp" alt="Our cusromers in Canada"
+                loading="lazy" width="500" height="630">
+            </div>
+            <div class="testimonial__info">
+              <span class="testimonial__name">
+                Michael
+              </span>
+              <p class="testimonial__txt">
+                Highly recommend this agency for anyone planning a trip to Canada. They helped me discover hidden gems
+                and experience the best of Canadian hospitality. From exploring the vibrant city of Toronto to immersing
+                myself in the natural beauty of Banff, it was an adventure of a lifetime.
+              </p>
+            </div>
+          </blockquote>
+        </div>
+
+        <div class="swiper-slide testimonial__item">
+          <blockquote class="testimonial__content">
+            <div class="testimonial__img-box">
+              <img class="testimonial__img" src="./images/testimonials/review-03.webp" alt="Our cusromers in New-York"
+                loading="lazy" width="500" height="630">
+            </div>
+            <div class="testimonial__info">
+              <span class="testimonial__name">
+                Sara
+              </span>
+              <p class="testimonial__txt">
+                New York exceeded all my expectations and even more! I visited the Statue of Liberty, explored
+                the Museum of Modern Art, and, of course, couldn't resist the shops on Fifth Avenue. This city is full
+                of life and diversity, and I'm already dreaming of returning.
+              </p>
+            </div>
+          </blockquote>
+        </div>
+
+        <div class="swiper-slide testimonial__item">
+          <blockquote class="testimonial__content">
+            <div class="testimonial__img-box">
+              <img class="testimonial__img" src="./images/testimonials/review-05.webp"
+                alt="Our cusromers in Yellowstone National Park" loading="lazy" width="500" height="630">
+            </div>
+            <div class="testimonial__info">
+              <span class="testimonial__name">
+                John
+              </span>
+              <p class="testimonial__txt">
+                My visit to Yellowstone National Park was unforgettable. Encountering the wilderness and unique
+                geological features left me in awe.
+              </p>
+            </div>
+          </blockquote>
+        </div>
+
+      </div>
+      <div class="testimonial__swiper-bottom">
+        <div class="swiper-pagination testimonial__swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper__buttons">
+          <div class="swiper-button-prev">
+            <svg class="swiper-button-icon" width="20" height="20">
+              <use href="./images/symbol-defs.svg#icon-arrow"></use>
+            </svg>
+          </div>
+          <div class="swiper-button-next">
+            <svg class="swiper-button-icon" width="20" height="20">
+              <use href="./images/symbol-defs.svg#icon-arrow"></use>
+            </svg>
+          </div>
+        </div>
+
+      </div>
 
     </div>
-
   </div>
-
 </section>
 
       <section class="book section book__section" style="background-image: url('./../images/decor/decor-book.png');">
@@ -1137,18 +1251,18 @@
         </a>
       </li>
       <li class="menu__item">
-        <a class="menu__link @@trips" href="#">
+        <a class="menu__link @@about" href="#">
+          About Us
+        </a>
+      </li>
+      <li class="menu__item">
+        <a class="menu__link @@trips" href="tour.html">
           Your trips
         </a>
       </li>
       <li class="menu__item">
-        <a class="menu__link @@stories" href="#">
-          Stories
-        </a>
-      </li>
-      <li class="menu__item">
         <a class="menu__link @@guide" href="#">
-          Smart guide
+          Stories
         </a>
       </li>
       <li class="menu__item">
