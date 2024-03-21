@@ -41,9 +41,9 @@
 }
 
 .info-card {
+  padding: 20px;
   max-width: 1160px;
   width: 100%;
-  padding: 20px;
   background-color: $white;
   border-radius: 24px;
 
@@ -51,7 +51,6 @@
     display: flex;
     justify-content: space-between;
     align-items: stretch;
-
 
     @media (max-width:576px) {
       flex-direction: column;
@@ -83,9 +82,9 @@
   }
 
   &__title {
+    margin-bottom: 10px;
     max-width: 340px;
     width: 100%;
-    margin-bottom: 10px;
     font-size: 37px;
     line-height: 1.1;
     font-weight: 200;
@@ -94,8 +93,8 @@
 
   &__txt {
     margin-bottom: 18px;
-    font-size: 20px;
     width: 100%;
+    font-size: 20px;
   }
 
   &__button {

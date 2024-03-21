@@ -5,9 +5,12 @@
      display: flex;
      align-items: center;
      justify-content: flex-start;
-     overflow-y: scroll;
-     padding-bottom: 10px;
-     -webkit-padding-bottom: 10px;
+
+     @media (max-width: 1024px) {
+       overflow-y: scroll;
+       padding-bottom: 10px;
+       -webkit-padding-bottom: 10px;
+     }
    }
 
    &__nav-item {
@@ -34,11 +37,19 @@
        border-color: $accent;
      }
 
-     @media (max-width: 1200px) {
+     @media (max-width: 1024px) {
+       width: fit-content;
+       flex-shrink: 0;
+       padding-right: 60px;
+     }
+
+     @media (max-width: 768px) {
        width: fit-content;
        flex-shrink: 0;
        padding-right: 40px;
      }
+
+
    }
 
    &__info {

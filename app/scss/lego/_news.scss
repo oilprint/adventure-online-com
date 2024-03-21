@@ -41,7 +41,6 @@
     border-radius: 24px;
 
     &--first {
-
       &::before {
         position: absolute;
         content: '';
@@ -78,7 +77,6 @@
   &__info {
     display: flex;
     flex-direction: column;
-
   }
 
   &__txt {
@@ -100,10 +98,7 @@
       margin-top: 20px;
       margin: 0 auto;
     }
-
   }
-
-
 }
 
 .news-card {
