@@ -1,6 +1,5 @@
  .tabs {
    background-color: $light;
-   text-align: left;
 
    &__nav {
      display: flex;
@@ -60,6 +59,7 @@
 
    &__headline {
      font-size: 72px;
+     text-align: left;
      margin-bottom: 20px;
 
      @media (max-width: 1024px) {
@@ -67,7 +67,7 @@
      }
 
      @media (max-width: 768px) {
-       font-size: 48px;
+       font-size: 40px;
      }
 
      @media (max-width: 480px) {
@@ -75,11 +75,11 @@
      }
    }
 
-   &__inner {
-     &--text {
-       &:not(:last-child) {
-         margin-bottom: 20px;
-       }
+   &__txt {
+     text-align: left;
+
+     &:not(:last-child) {
+       margin-bottom: 20px;
      }
    }
 
@@ -126,6 +126,7 @@
    &__list {
      display: flex;
      flex-direction: column;
+     text-align: left;
 
      @media (max-width: 768px) {
        gap: 30px;
@@ -152,7 +153,7 @@
        flex-direction: row-reverse;
 
        .tabs__inner {
-         width: 40%;
+         width: 39%;
        }
 
        .tabs__image-box {
@@ -230,24 +231,37 @@
    }
 
    &__link {
-     margin: auto;
-     color: $accent;
+     text-align: center;
+     color: $primary;
      margin-top: 30px;
 
      &::before {
-       background-color: $accent;
+       background-color: $primary;
      }
 
      &:hover {
-       color: $primary;
+       color: $accent;
+
+       &::before {
+         background-color: $accent;
+       }
      }
    }
 
    &__wrapper {
-     column-gap: 50px;
+     padding-left: 20px;
      column-count: 2;
-     font-size: 24px;
-     font-weight: 600;
+     -webkit-column-count: 2;
+     -moz-column-count: 2;
+     column-gap: 50px;
+     -webkit-column-gap: 50px;
+     -moz-column-gap: 50px;
+
+     @media (max-width: 768px) {
+       column-count: 1;
+       -webkit-column-count: 1;
+       -moz-column-count: 1;
+     }
    }
 
    &__caption {
