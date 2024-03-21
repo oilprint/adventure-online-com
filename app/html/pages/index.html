@@ -5,35 +5,48 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Digital Marketing Agency DolGuldur | Home Page</title>
+  <title>Travel Agency Adventure Online | Home Page</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Rubik:wght@400;700&display=swap"
-    rel="stylesheet">
+  @@include('../components/fonts.html')
 
-
-  <link rel="icon" href="favicon/favicon.ico" sizes="any">
-  <link rel="icon" href="favicon/favicon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="favicon/afavicon/pple-touch-icon.png/">
+  @@include('../components/favicon.html')
 
   <link rel="stylesheet" href="css/index.min.css">
 </head>
 
 <body>
+  <div class="wrapper">
+    @@include('../components/header.html', {
+    "home": "current"
+    })
 
+    <main>
 
-  @@include('../components/header.html', {
-  "home": "current"
-  })
+      <h1 class="sr-only">
+        Discover Your Dream Destinations with Adventure-online
+      </h1>
 
-  <main>
+      @@include('../components/hero.html')
+      @@include('../components/category.html')
+      @@include('../components/aboutUs.html')
+      @@include('../components/mission.html')
 
-  </main>
+      @@include('../components/destinations.html')
+      @@include('../components/news.html')
+      @@include('../components/testimonial.html')
 
-  @@include('../components/footer.html')
+      @@include('../components/book.html')
+    </main>
 
-
+    @@include('../components/footer.html', {
+    "home": "current"
+    })
+  </div>
+  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.0/bundled/lenis.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
+  <script src="js/gsap.js"></script>
   <script src="js/main.min.js"></script>
 </body>
 

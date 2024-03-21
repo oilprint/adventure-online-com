@@ -1,0 +1,70 @@
+@import 'global/global';
+@import '../../node_modules/swiper/swiper.scss';
+@import '../../node_modules/swiper/modules/pagination/pagination.scss';
+
+@import 'lego/details';
+@import 'lego/tabs';
+@import 'lego/modal';
+@import 'lego/faqs';
+
+.tour {
+  margin-top: 135px;
+  height: 40vh;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover;
+
+  &__container {
+    height: 100%;
+    display: flex;
+    align-items: end;
+  }
+
+  &__content {
+    color: $light;
+    width: fit-content;
+    margin-top: auto;
+    margin-bottom: 20px;
+    padding: 20px 40px;
+    border-radius: 12px;
+    background: linear-gradient(248deg, rgba(255, 0, 0, 0.17) 1.52%, rgba(255, 255, 255, 0.00) 96.99%);
+    backdrop-filter: blur(25px);
+
+
+  }
+
+  &__title {
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 1;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+
+    @media (max-width: 768px) {
+      font-size: 56px;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 42px;
+    }
+  }
+
+  &__time {
+    color: $light;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 1;
+    text-transform: uppercase;
+
+    @media (max-width: 480px) {
+      font-size: 32px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    margin-top: 100px;
+    height: 30vh;
+
+  }
+
+}

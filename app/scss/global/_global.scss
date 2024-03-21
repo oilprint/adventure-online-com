@@ -1,37 +1,33 @@
-html,
-body {
-  height: 100%;
-}
+@import 'global/reset';
+@import 'global/vars';
+@import 'global/ints';
 
 body {
   display: flex;
   flex-direction: column;
-  font-family: 'Rubik', sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1.7;
-  letter-spacing: 0.03em;
-  color: $secondary;
-  background-color: $light;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 1.3;
+  color: $primary;
   overflow-x: hidden;
-  
+  background-color: $light;
+  scroll-behavior: smooth;
+}
+
+html {
   &.lock {
-    overflow-y: hidden;
+    height: 100%;
   }
 }
 
-
 .wrapper {
-   position: relative;
-   overflow-x: hidden;
+  width: 100%;
+  overflow-x: hidden;
 
-   &.lock {
-     overflow-y: hidden;
-   }
-}
-
-main {
-  flex-grow: 1;
+  &.lock {
+    overflow-y: hidden;
+  }
 }
 
 .container {
@@ -39,14 +35,6 @@ main {
   width: 100%;
   margin: 0 auto;
   padding: 0 15px;
-}
-
-.section {
-  padding: 60px 0;
-
-  @media (min-width: 1200px) {
-    padding: 94px 0;
-  }
 }
 
 .sr-only {
@@ -60,71 +48,189 @@ main {
   border: 0;
 }
 
-.title {
-  font-size: 28px;
-  font-weight: 400;
-  color: $grey-dark;
+@import 'lego/header';
+@import 'lego/mobile';
+@import 'lego/modal';
+@import 'lego/menu';
+@import 'lego/footer';
 
-  @media (min-width: 1200px) {
-    margin-bottom: 36px;
+.title {
+  font-family: 'Rubik',
+    sans-serif;
+  text-align: center;
+  font-size: 90px;
+  font-weight: 400;
+  line-height: 1;
+  text-transform: uppercase;
+  color: $light;
+
+  &--light {
+    color: $primary;
+    font-weight: 500;
+  }
+
+  @media (max-width: 1200px) {
+    font-size: calc(36px + (90 - 36) * ((100vw - 360px) / (1200 - 360)));
+  }
+}
+
+.headline {
+  font-size: 22px;
+  line-height: 1.1;
+  font-weight: 200;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  font-size: 48px;
+  text-transform: uppercase;
+  color: $accent;
+
+  @media (max-width: 1200px) {
+    font-size: calc(24px + (48 - 24) * ((100vw - 360px) / (1200 - 360)));
+  }
+}
+
+.section {
+  background-repeat: no-repeat;
+  background-position: top 10px center;
+  background-size: 80vw;
+  padding: 60px 0 70px;
+  background-color: $dark;
+  text-align: center;
+
+  &--light {
+    background-color: $light;
+  }
+
+  &--dark {
+    background-color: $dark;
+    color: $light;
+  }
+
+  @media(max-width: 768px) {
+    padding-bottom: 50px;
+  }
+
+  @media(max-width: 480px) {
+    padding: 30px 0 50px;
   }
 }
 
 .social {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-
-  @media (min-width: 1200px) {
-    justify-content: flex-start;
+  &__title {
+    font-size: 32px;
+    text-transform: uppercase;
+    color: $light;
+    margin-bottom: 14px;
   }
 
-  &__item:not(:last-child) {
-    margin-right: 10px;
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 14px;
+    }
   }
 
   &__link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    transition: background-color 0.4s, box-shadow 0.4s, outline 0.4s;
+    position: relative;
+    width: fit-content;
+    display: block;
+    text-transform: uppercase;
+    color: $accent;
+    transition: color 0.4s, outline 0.4s;
 
-    &--white {
-      background-color: rgba($light, 0.1);
-
-      .social__icon {
-        fill: $light;
-      }
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      left: 0;
+      bottom: -4px;
+      background-color: $accent;
+      transform-origin: right;
+      transform: scaleX(0);
+      transition: transform 0.4s ease-in-out;
     }
 
     &:focus {
       outline: solid 1px $accent;
+      border-radius: 4px;
       outline-offset: 4px;
     }
 
     &:hover {
-      background-color: $accent;
+      color: $accent;
 
-      .social__icon {
-        fill: $grey-light;
+      &::before {
+        transform: scaleX(1);
+        transform-origin: left;
       }
     }
 
     &:active {
-      box-shadow: inset 4px 4px 4px rgba($primary, 0.25);
-      background-color: $accent;
+      color: $primary;
 
-      .social__icon {
-        fill: $light;
+      &:before {
+        transform: scaleX(1);
+        transform-origin: left;
       }
     }
   }
+}
 
-  &__icon {
-    fill: $secondary;
-    transition: fill 0.4s;
+.text-bold {
+  font-weight: 600;
+}
+
+.destination-details {
+  display: flex;
+  text-align: left;
+
+  &__item {
+    padding: 7px 10px;
+    background-color: $light;
+    display: flex;
+    flex-direction: column;
+
+    &--accent {
+      position: relative;
+      background-color: $accent;
+      color: $light;
+
+      &::before {
+        position: absolute;
+        content: '';
+        top: 0;
+        right: -10px;
+        bottom: 0;
+        width: 0;
+        height: 0;
+        border: 0 solid transparent;
+        border-bottom-width: 28px;
+        border-top-width: 28px;
+        border-left: 10px solid $accent;
+      }
+    }
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+
+    &:first-child {
+      margin-right: 20px;
+    }
+  }
+
+  &__subtitle {
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+  &__txt {
+    font-size: 24px;
+    line-height: 1.1;
+    text-transform: uppercase;
+    font-weight: 600;
   }
 }

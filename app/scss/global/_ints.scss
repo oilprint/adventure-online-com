@@ -1,0 +1,132 @@
+.logo {
+  flex-shrink: 0;
+  border-radius: 4px;
+  transition: outline 0.4s, opacity 0.4s;
+
+  &:focus {
+    outline: solid 1px $accent;
+    outline-offset: 4px;
+  }
+
+  &:hover {
+    outline: solid 1px $accent;
+    outline-offset: 4px;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+
+  &__img {
+    width: 147px;
+  }
+}
+
+.button {
+  display: inline-block;
+  flex-shrink: 0;
+  padding: 18px 36px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+  text-transform: uppercase;
+  border-radius: 12px;
+  color: $dark;
+
+  background-color: $accent;
+  transition: color 0.4s,
+    background-color 0.4s,
+    outline 0.4s;
+
+  &--secondary {
+    outline: solid 1px $dark;
+    background-color: $light;
+  }
+
+  &:focus {
+    outline: solid 1px $accent;
+    outline-offset: 4px;
+  }
+
+  &:hover {
+    background-color: $dark;
+    color: $accent;
+    outline: solid 1px $accent;
+  }
+
+  &:active {
+    background-color: $accent;
+    color: $dark;
+  }
+
+  @media (max-width: 375px) {
+    padding: 18px 24px;
+  }
+}
+
+.link {
+  position: relative;
+  display: inline-block;
+  flex-shrink: 0;
+  font-size: 22px;
+  font-weight: 200;
+  text-transform: uppercase;
+  color: $light;
+  transition: color 0.4s;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    left: 0;
+    bottom: -4px;
+    background-color: rgba($white, 0.5);
+    transform-origin: left;
+    transform: scaleX(1);
+    transition: transform 0.4s ease-in-out;
+  }
+
+  &:focus {
+    outline: solid 1px $accent;
+    border-radius: 4px;
+  }
+
+  &:hover {
+    color: $accent;
+
+    &::before {
+      transform: scaleX(0);
+      transform-origin: right;
+    }
+  }
+
+  &:active {
+    color: $primary;
+    opacity: 0, 5;
+
+    &:before {
+      transform: scaleX(1);
+      transform-origin: right;
+    }
+  }
+}
+
+.link-txt {
+  color: $accent;
+  transition: color 0.4s;
+
+  &:focus {
+    outline: solid 1px $accent;
+    border-radius: 4px;
+  }
+
+  &:hover {
+    color: $light;
+  }
+
+  &:active {
+    color: $light;
+    opacity: 0, 5;
+  }
+}

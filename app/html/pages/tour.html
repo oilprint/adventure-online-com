@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Agency Adventure Online | 5-Day NYC Tour</title>
+
+  @@include('../components/fonts.html')
+
+  @@include('../components/favicon.html')
+
+  <link rel="stylesheet" href="css/tour.min.css">
+</head>
+
+<body>
+  @@include('../components/header.html', {
+  "trips": "current"
+  })
+
+  <main>
+    <section class="tour" style="background-image: url('./images/new-york/hero-img.webp')">
+      <div class="container tour__container">
+        <div class="tour__content">
+          <h1 class="tour__title">
+            New york
+          </h1>
+          <div class="tour__time">
+            Nov,
+            <time datetime="2024-11-01"> 1</time> - <time datetime="2024-11-05">5</time>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    @@include('../components/details.html')
+    @@include('../components/tabs.html')
+    @@include('../components/faq.html')
+  </main>
+
+  @@include('../components/footer.html', {
+  "trips": "current"
+  })
+
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,145 @@
+.category {
+  &__title {
+    margin-bottom: 20px;
+
+    @media (max-width: 1200px) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 50px;
+
+    @media (max-width: 1200px) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+
+    @media (max-width: 992px) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__item {
+    max-width: 1160px;
+    width: 100%;
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__link {
+    margin: 0 auto;
+  }
+}
+
+.info-card {
+  padding: 20px;
+  max-width: 1160px;
+  width: 100%;
+  background-color: $white;
+  border-radius: 24px;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+
+    @media (max-width:576px) {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 20px;
+    }
+  }
+
+  &__content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 50%;
+    min-height: 213px;
+    text-align: left;
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 40px 40px;
+
+    @media (max-width:576px) {
+      max-width: 100%;
+    }
+  }
+
+  &__content-top {
+    width: 100%;
+  }
+
+  &__title {
+    margin-bottom: 10px;
+    max-width: 340px;
+    width: 100%;
+    font-size: 37px;
+    line-height: 1.1;
+    font-weight: 200;
+    text-transform: uppercase;
+  }
+
+  &__txt {
+    margin-bottom: 18px;
+    width: 100%;
+    font-size: 20px;
+  }
+
+  &__button {
+    margin-left: auto;
+  }
+
+  &__img-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 14px;
+    overflow: hidden;
+    width: 48%;
+    border: 1px solid $white;
+    transition: border-color 0.3s ease, opacity 0.3s ease;
+
+    &:focus {
+      outline: solid 1px $accent;
+      outline-offset: 4px;
+    }
+
+    &:hover {
+      border-color: $accent;
+
+      .info-card__img {
+        transform: scale(1.1);
+      }
+    }
+
+    &:active {
+      opacity: 0.7;
+    }
+
+    @media (max-width:576px) {
+      width: 100%;
+      max-height: 200px;
+    }
+  }
+
+  &__img {
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  &__button {
+    width: fit-content;
+  }
+}

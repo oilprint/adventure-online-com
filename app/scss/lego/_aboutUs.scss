@@ -1,0 +1,172 @@
+.about {
+
+  &__title {
+    margin-bottom: 70px;
+
+    @media (max-width: 1200px) {
+      margin-bottom: 30px;
+    }
+
+    @media (max-width: 480px) {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__inner {
+    width: 100%;
+  }
+
+  &__gsap {
+    width: 100%;
+  }
+
+  &__track {
+    width: fit-content;
+    will-change: transform;
+  }
+
+  &__list {
+    display: flex;
+    gap: 120px;
+    margin-bottom: 60px;
+
+    @media (max-width: 1200px) {
+      gap: 80px;
+      margin-bottom: 40px;
+    }
+
+    @media (max-width: 768px) {
+      margin-bottom: 30px;
+    }
+
+    @media (max-width: 480px) {
+      gap: 40px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    gap: 20px;
+    flex-shrink: 0;
+  }
+
+  &__img {
+    border-radius: 24px;
+    object-fit: cover;
+    height: auto;
+
+    @media (max-width: 768px) {
+      width: 280px;
+    }
+
+    @media (max-width: 480px) {
+      width: 240px;
+    }
+  }
+
+  &__content {
+    position: relative;
+    padding: 26px 0 0;
+    max-width: 570px;
+    width: 100%;
+    text-align: left;
+
+    &:before {
+      display: block;
+      position: absolute;
+      content: "";
+      left: 0;
+      right: 0;
+      top: 0;
+      height: 6px;
+      background-color: $accent;
+      border-radius: 12px;
+    }
+
+    @media (max-width: 1200px) {
+      width: 450px;
+    }
+
+    @media (max-width: 768px) {
+      width: 400px;
+    }
+
+    @media (max-width: 480px) {
+      width: 320px;
+    }
+  }
+
+  &__headline {
+    display: block;
+    font-size: 70px;
+    margin-bottom: 20px;
+
+    @media (max-width: 1200px) {
+      font-size: 50px;
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 32px;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    gap: 80px;
+
+    @media (max-width: 480px) {
+      gap: 40px;
+    }
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: flex-start;
+    width: 570px;
+    flex-shrink: 0;
+
+    @media (max-width: 1200px) {
+      width: 450px;
+    }
+
+    @media (max-width: 768px) {
+      width: 320px;
+    }
+  }
+
+  &__bottom-first {
+    width: 570px;
+    flex-shrink: 0;
+
+    @media (max-width: 1200px) {
+      width: 450px;
+    }
+
+    @media (max-width: 768px) {
+      width: 320px;
+    }
+  }
+
+  &__big-text {
+    text-align: left;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 40px;
+
+    @media (max-width: 1200px) {
+      font-size: 32px;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 24px;
+    }
+
+  }
+
+  @media (max-width: 480px) {
+    padding-bottom: 20px;
+  }
+}
