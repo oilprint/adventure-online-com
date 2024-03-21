@@ -90,11 +90,30 @@ document.addEventListener('DOMContentLoaded', () => {
         prevEl: '.swiper-button-prev',
       }, 
 
-    // If we need pagination
     pagination: {
         el: ".swiper-pagination",
         type: "fraction",
       },
+  });
+
+
+  //swiper-3
+
+  const swiper3 = new Swiper('.swiper-3', {
+    speed: 1500,
+    loop: true,
+    grabCursor: true,
+    autoplay: {
+      delay: 3000,
+    },
+    slideToClickedSlide: true,
+
+    pagination: {
+    el: '.swiper-pagination',
+  },
+    
+  
+    spaceBetween: 18,
   });
 
   //logo footer

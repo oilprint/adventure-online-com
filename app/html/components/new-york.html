@@ -20,24 +20,30 @@
   })
 
   <main>
-    <section class="tour" style="background-image: url('./images/new-york/hero-img.webp')">
-      <div class="container tour__container">
-        <div class="tour__content">
-          <h1 class="tour__title">
-            New york
-          </h1>
-          <div class="tour__time">
-            Nov,
-            <time datetime="2024-11-01"> 1</time> - <time datetime="2024-11-05">5</time>
+    <section class="section tour">
+      <div class="tour__hero" style="background-image: url('./images/new-york/hero-img.webp')">
+        <div class="container">
+          <div class="tour__hero-content">
+
+            <h1 class="tour__hero-title">
+              New york
+            </h1>
+            <div class="tour__hero-time">
+              <time datetime="2024-11-01">Nov 1</time> - <time datetime="2024-11-05">5</time>
+            </div>
+
           </div>
+
+        </div>
+        <div class="container">
+
         </div>
       </div>
     </section>
 
-    @@include('../components/details.html')
+
     @@include('../components/tabs.html')
     @@include('../components/faq.html')
-
   </main>
 
   @@include('../components/footer.html', {

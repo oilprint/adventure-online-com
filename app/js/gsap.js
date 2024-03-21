@@ -64,7 +64,6 @@ document.addEventListener('DOMContentLoaded', () => {
         start: 'top 70%',
         end: 'center 10%',
         scrub: true,
-        markers: true
       },
       width: '570px',
       ease: 'none',

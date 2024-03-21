@@ -24,18 +24,24 @@
 
 .button {
   display: inline-block;
-
   flex-shrink: 0;
   padding: 18px 36px;
   font-size: 14px;
   font-weight: 500;
+  line-height: 1;
   text-transform: uppercase;
   border-radius: 12px;
   color: $dark;
+
   background-color: $accent;
   transition: color 0.4s,
     background-color 0.4s,
     outline 0.4s;
+
+  &--secondary {
+    outline: solid 1px $dark;
+    background-color: $light;
+  }
 
   &:focus {
     outline: solid 1px $accent;
@@ -52,6 +58,7 @@
     background-color: $accent;
     color: $dark;
   }
+
 }
 
 .link {

@@ -93,64 +93,15 @@
     border-radius: 9px;
   }
 
+  &__list {
+    margin-bottom: 30px;
+  }
+
   &__geo {
     font-size: 50px;
     font-weight: 200;
     line-height: 1.1;
     margin-bottom: 30px;
-  }
-
-  &__list {
-    display: flex;
-    margin-bottom: 30px;
-  }
-
-  &__item {
-    padding: 7px 10px;
-    background-color: $light;
-    display: flex;
-    flex-direction: column;
-
-    &--accent {
-      position: relative;
-      background-color: $accent;
-      color: $light;
-
-      &::before {
-        position: absolute;
-        content: '';
-        top: 0;
-        right: -10px;
-        bottom: 0;
-        width: 0;
-        height: 0;
-        border: 0 solid transparent;
-        border-bottom-width: 28px;
-        border-top-width: 28px;
-        border-left: 10px solid $accent;
-      }
-    }
-
-    &:not(:last-child) {
-      margin-right: 10px;
-    }
-
-    &:first-child {
-      margin-right: 20px;
-    }
-  }
-
-  &__subtitle {
-    font-size: 12px;
-    font-weight: 500;
-    text-transform: uppercase;
-  }
-
-  &__txt {
-    font-size: 24px;
-    line-height: 1.1;
-    text-transform: uppercase;
-    font-weight: 600;
   }
 
   &__icons {
