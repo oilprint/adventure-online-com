@@ -48,7 +48,6 @@
   border-radius: 24px;
 
   &__inner {
-    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: stretch;
@@ -104,10 +103,6 @@
   }
 
   &__img-box {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -135,7 +130,6 @@
     }
 
     @media (max-width:576px) {
-      position: static;
       width: 100%;
       max-height: 200px;
     }

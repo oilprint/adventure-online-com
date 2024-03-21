@@ -1,10 +1,9 @@
 .menu {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   max-width: 570px;
   width: 100%;
-  gap: 20px;
+  gap: 30px;
 
   &__item {
     flex-shrink: 0;

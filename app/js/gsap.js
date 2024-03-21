@@ -58,6 +58,38 @@ document.addEventListener('DOMContentLoaded', () => {
         x: '-=' + scrollSliderTransform + 'px'
       });
 
+    gsap.from('.category__item', {
+      scrollTrigger: {
+        trigger: '.category',
+        start: 'top 70%',
+        end: 'center 10%',
+        scrub: true,
+        markers: true
+      },
+      width: '570px',
+      ease: 'none',
+      stagger: 1,
+      duration: 1
+  
+    });
+
+
+
+//     const items = gsap.utils.toArray('.category__item');
+// items.forEach((item, index) => {
+//   gsap.from(item, {
+//     scrollTrigger: {
+//       trigger: '.category',
+//       start: 'top bottom',
+//       end: 'center center',
+//       scrub: true
+//     },
+//     width: '100px',
+    
+//   });
+// });
+
+
 
 	//resize window
 	const debouncedResize = _.debounce(onWindowResize, 500);

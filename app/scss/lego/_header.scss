@@ -33,7 +33,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    column-gap: 150px;
+    column-gap: 50px;
+    max-width: 820px;
+    width: 100%;
 
     &.open {
       visibility: visible;
