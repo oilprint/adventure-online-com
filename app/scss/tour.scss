@@ -29,8 +29,6 @@
     border-radius: 12px;
     background: linear-gradient(248deg, rgba(255, 0, 0, 0.17) 1.52%, rgba(255, 255, 255, 0.00) 96.99%);
     backdrop-filter: blur(25px);
-
-
   }
 
   &__title {
@@ -64,7 +62,5 @@
   @media (max-width: 480px) {
     margin-top: 100px;
     height: 30vh;
-
   }
-
 }
