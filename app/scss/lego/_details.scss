@@ -1,6 +1,11 @@
 .details {
+  background-size: 50vw;
   padding-bottom: 0;
   text-align: left;
+
+  @media (max-width: 1440px) {
+    background-size: 80vw;
+  }
 
   &__title {
     margin-bottom: 10px;
