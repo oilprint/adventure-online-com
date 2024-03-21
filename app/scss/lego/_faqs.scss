@@ -16,16 +16,6 @@
     justify-content: space-between;
   }
 
-  &__image {
-    max-width: 430px;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-position: left top;
-    background-size: contain;
-    background-image: url('../images/new-york/faq.jpg');
-    border-radius: 24px;
-  }
-
   &__accordion {
     position: relative;
     margin-left: auto;
@@ -42,7 +32,7 @@
       background-repeat: no-repeat;
       background-position: left top;
       background-size: cover;
-      background-image: url('./../images/new-york/faq.jpg');
+      background-image: url('./../images/new-york/faq.webp');
     }
 
     @media (max-width: 768px) {
