@@ -29,6 +29,8 @@
     border-radius: 12px;
     background: linear-gradient(248deg, rgba(255, 0, 0, 0.17) 1.52%, rgba(255, 255, 255, 0.00) 96.99%);
     backdrop-filter: blur(25px);
+
+
   }
 
   &__title {
@@ -37,6 +39,14 @@
     line-height: 1;
     text-transform: uppercase;
     margin-bottom: 10px;
+
+    @media (max-width: 768px) {
+      font-size: 56px;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 42px;
+    }
   }
 
   &__time {
@@ -45,6 +55,16 @@
     font-weight: 600;
     line-height: 1;
     text-transform: uppercase;
+
+    @media (max-width: 480px) {
+      font-size: 32px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    margin-top: 100px;
+    height: 30vh;
+
   }
 
 }

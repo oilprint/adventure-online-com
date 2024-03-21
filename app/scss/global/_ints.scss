@@ -59,6 +59,9 @@
     color: $dark;
   }
 
+  @media (max-width: 375px) {
+    padding: 18px 24px;
+  }
 }
 
 .link {
