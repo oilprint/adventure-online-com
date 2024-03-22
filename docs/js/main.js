@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
     // mousewheel: true,
     autoplay: {
-          delay: 1200,
+          delay: 3000,
           pauseOnMouseEnter: true,
         },
     spaceBetween: 18,
