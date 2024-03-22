@@ -65,16 +65,24 @@ document.addEventListener('DOMContentLoaded', () => {
           el: ".swiper-pagination",
           clickable: true,
         },
-    // mousewheel: true,
-    autoplay: {
-          delay: 3000,
-          pauseOnMouseEnter: true,
-        },
+    
     spaceBetween: 18,
     parallax:true, 
     keyboard: {
           enabled: true,
         },
+
+         breakpoints: {
+     
+      768: {
+       autoplay: {
+          delay: 3000,
+          pauseOnMouseEnter: true,
+        },
+        
+      }
+    }
+      
   });
 
   const swiper2 = new Swiper('.swiper-2', {

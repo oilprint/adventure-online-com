@@ -30,7 +30,6 @@
   box-shadow: 8px 8px 3px rgba(0, 0, 0, 0.12);
   transform: scale(1);
   margin: auto;
-  height: auto;
   transition: transform 0.5s;
 
   &--small {
@@ -44,7 +43,6 @@
   }
 
   @media (max-width: 576px) {
-    margin: 20px auto;
     overflow-y: scroll;
   }
 
