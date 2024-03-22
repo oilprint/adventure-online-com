@@ -72,17 +72,18 @@ document.addEventListener('DOMContentLoaded', () => {
           enabled: true,
         },
 
-         breakpoints: {
-     
+    autoplay: {
+    enabled: false,
+    },
+    breakpoints: {
       768: {
-       autoplay: {
+        autoplay: {
+          enabled: true,
           delay: 3000,
           pauseOnMouseEnter: true,
-        },
-        
+        }
       }
-    }
-      
+    },     
   });
 
   const swiper2 = new Swiper('.swiper-2', {
