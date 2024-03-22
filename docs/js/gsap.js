@@ -27,8 +27,6 @@ document.addEventListener('DOMContentLoaded', () => {
   gsap.registerPlugin(ScrollTrigger);
 
   	const gsapBl = document.querySelector('.about__gsap').offsetWidth;
-
-    // const gsapTrack = document.querySelector('.about__track').offsetWidth;
       
       let gsapTrack;
 
@@ -58,12 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
         x: '-=' + scrollSliderTransform + 'px'
       });
 
-
-  const laptopScreen = window.matchMedia('(min-width: 992px)');
-
-  if (laptopScreen.matches) {
-
-    gsap.from('.category__item', {
+      gsap.from('.category__item', {
       scrollTrigger: {
         trigger: '.category',
         start: 'top 70%',
@@ -75,14 +68,13 @@ document.addEventListener('DOMContentLoaded', () => {
       stagger: 1,
       duration: 1
     })
-  }
-
 
 
 	//resize window
-	const debouncedResize = _.debounce(onWindowResize, 500);
-	function onWindowResize() {
-		location.reload();
-	}
-	window.addEventListener('resize', debouncedResize);
+	// const debouncedResize = _.debounce(onWindowResize, 500);
+	// function onWindowResize() {
+	// 	location.reload();
+	// }
+	// window.addEventListener('resize', debouncedResize);
+
 })
