@@ -58,6 +58,11 @@ document.addEventListener('DOMContentLoaded', () => {
         x: '-=' + scrollSliderTransform + 'px'
       });
 
+
+  const laptopScreen = window.matchMedia('(min-width: 992px)');
+
+  if (laptopScreen.matches) {
+
     gsap.from('.category__item', {
       scrollTrigger: {
         trigger: '.category',
@@ -69,24 +74,8 @@ document.addEventListener('DOMContentLoaded', () => {
       ease: 'none',
       stagger: 1,
       duration: 1
-  
-    });
-
-
-
-//     const items = gsap.utils.toArray('.category__item');
-// items.forEach((item, index) => {
-//   gsap.from(item, {
-//     scrollTrigger: {
-//       trigger: '.category',
-//       start: 'top bottom',
-//       end: 'center center',
-//       scrub: true
-//     },
-//     width: '100px',
-    
-//   });
-// });
+    })
+  }
 
 
 
