@@ -19,6 +19,7 @@
 <h3> 🛠️📱Technologies: </h3> 
 The project will be implemented using modern web technologies, such as HTML, CSS, JavaScript, GSAP for the frontend
 
+
 🎯The goal of redesigning the "SmileCare" dental clinic website is to create a convenient and informative environment for patients, allowing them to familiarize themselves with the clinic's services, find necessary information about the team of doctors, and make online appointments to ensure maximum convenience and accessibility of medical services.
 
 
