@@ -4,7 +4,7 @@
 
 # [go to website](https://oilprint.github.io/adventure-online-com/)
 
- <h2>🎨🖥️ Project Name: Travel agency website redesign</h2>
+ <h2>🎨🖥️ Travel agency website redesign</h2>
 
 🎨🖥️ This repository contains the source code for a tourist agency website. The site is designed to provide convenience and accessibility for clients looking to plan their trips. Web pages offer information about various tours, services, prices, and agency contact details.
 
