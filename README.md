@@ -4,21 +4,19 @@
 
 # [go to website](https://oilprint.github.io/adventure-online-com/)
 
-🎨🖥️ Project Name: Redesign of "Family Dental" Dental Clinic Website
+ <h2>🎨🖥️ Project Name: Travel agency website redesign</h2>
 
 🎨🖥️ This repository contains the source code for a tourist agency website. The site is designed to provide convenience and accessibility for clients looking to plan their trips. Web pages offer information about various tours, services, prices, and agency contact details.
 
-Functional features include:
+<h3> 🛠️📱 Functional features include: </h3> 
 
-Tour catalog: Users can browse various tour offerings, including descriptions, photos, and prices.
+💠 Tour catalog: Users can browse various tour offerings, including descriptions, photos, and prices. <br/>
+💠 Booking: Clients can directly book tours through the website by providing necessary information and selecting convenient dates and options.<br/>
+💠 Review system: Visitors can leave their reviews and ratings after completing a tour, aiding other users in making informed decisions.<br/>
+💠 Contact information: The site includes agency contact details, including address, phone numbers, and email address, for prompt communication with clients.
 
-Booking: Clients can directly book tours through the website by providing necessary information and selecting convenient dates and options.
 
-Review system: Visitors can leave their reviews and ratings after completing a tour, aiding other users in making informed decisions.
-
-Contact information: The site includes agency contact details, including address, phone numbers, and email address, for prompt communication with clients.
-
-🛠️📱Technologies:
+<h3> 🛠️📱Technologies: </h3> 
 The project will be implemented using modern web technologies, such as HTML, CSS, JavaScript, GSAP for the frontend
 
 🎯The goal of redesigning the "SmileCare" dental clinic website is to create a convenient and informative environment for patients, allowing them to familiarize themselves with the clinic's services, find necessary information about the team of doctors, and make online appointments to ensure maximum convenience and accessibility of medical services.
