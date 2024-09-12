@@ -185,7 +185,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const accordion = document.querySelector('.faq__accordion');
   console.log(accordion);
 
-  accordion?.addEventListener('click', (e) => {
+  accordion.addEventListener('click', (e) => {
+    console.log("vjenvjvjer");
+    
     if (e.target.classList.contains('accordion__head')) {
         toggleAccordionHandler(e.target);
     }
@@ -193,7 +195,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function toggleAccordionHandler(target) {
     const accordionItem = target.closest('.accordion__item');
+    console.log(accordionItem);
     if (accordionItem.classList.contains('open')) {
+
+      console.log('yes');
+      
       accordionItem.classList.remove('open');
     } else {
       removeClasses(accordion.children, 'open');
