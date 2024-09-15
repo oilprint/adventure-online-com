@@ -21,6 +21,58 @@
     })
 
     <main>
+      <section class="section section--light contacts"
+        style="background-image: url('./images/new-york/decor-hero.webp');">
+        <div class="container">
+          <h2 class="title title--light contacts__title">
+            Contact us
+          </h2>
+          <p class="contacts__headline headline">
+            Contact us and ask whatever you want
+          </p>
+
+          <div class="contacts__inner" style="background-image: url('images/decor/food-delivery.png')">
+            <address class="footer__address">
+              <div class="footer__geo">
+                2464 Royal Ln. Mesa,
+                <br>
+                New Jersey 45463
+              </div>
+              <a class="footer__address-link footer__address-link--big" href="tel:+12085550112">
+                (208) 555-0112
+              </a>
+              <a class="footer__address-link" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=info@adv.com">
+                <svg class="footer__address-icon" width="20" height="20">
+                  <use href="./images/symbol-defs.svg#icon-mail"></use>
+                </svg>
+                info@adv.com
+              </a>
+            </address>
+            <form action="message" class="contacts-form">
+              <label class="contacts-form__label" for="name">
+                <input id="name" class="contacts-form__input" type="text" placeholder="Name" required>
+              </label>
+
+              <label class="contacts-form__label" for="e-mail">
+                <input id="e-mail" class="contacts-form__input" type="email" placeholder="E-mail" name="email" required>
+              </label>
+              <label class="contacts-form__label" for="message">
+                <textarea id="message" class="contacts-form__input" type="text"
+                  placeholder="Please type your message here..." name="message" required>
+              </label>
+             <button class="button contacts-form__button" type="submit">
+               Send message
+             </button>
+
+
+            </form>
+
+          </div>
+
+
+        </div>
+      </section>
+
 
     </main>
 
