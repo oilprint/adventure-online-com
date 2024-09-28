@@ -7,6 +7,14 @@
     text-align: left;
     text-transform: uppercase;
 
+    &--small {
+      font-size: 42px;
+
+      @media (max-width: 1200px) {
+        font-size: calc(32px + (42 - 32) * ((100vw - 360px) / (1200 - 360)));
+      }
+    }
+
     @media (max-width: 1200px) {
       font-size: calc(32px + (68 - 32) * ((100vw - 360px) / (1200 - 360)));
     }
