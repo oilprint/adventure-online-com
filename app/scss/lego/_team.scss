@@ -1,0 +1,56 @@
+.team {
+  background-size: 40vw;
+  background-position: top center;
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__subtitle {
+    font-size: 21px;
+    text-transform: uppercase;
+    max-width: 860px;
+    width: 100%;
+    margin: 0 auto 40px;
+  }
+
+  &__content {
+    background-color: $white;
+    border-radius: 24px;
+    padding: 40px;
+  }
+
+  &__nav {
+    display: inline-flex;
+    gap: 20px;
+    padding: 8px;
+    border-radius: 12px;
+    background-color: $light;
+  }
+
+  &__nav-item {
+    cursor: pointer;
+    border-radius: 8px;
+    padding: 10px 32px;
+    text-transform: uppercase;
+    transition: outline 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+
+    &:focus {
+      outline: 1px solid $accent;
+    }
+
+    &:hover {
+      background-color: $accent;
+    }
+
+    &:active {
+      background-color: $dark;
+      color: $light;
+    }
+
+    .active {
+      background-color: $accent;
+    }
+  }
+
+}
