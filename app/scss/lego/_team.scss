@@ -53,4 +53,47 @@
     }
   }
 
+  &__info {
+    display: flex;
+    gap: 60px;
+    align-items: stretch;
+
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+
+    &.active {
+      position: static;
+      opacity: 1;
+      visibility: visible;
+      height: auto;
+      padding-top: 30px;
+    }
+  }
+
+  &__img {
+    max-width: 520px;
+    width: 100%;
+    border-radius: 16px;
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    text-align: left;
+  }
+
+  &__name {
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 4px;
+  }
+
+  &__occupation {
+    text-transform: uppercase;
+  }
+
 }
