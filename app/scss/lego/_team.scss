@@ -14,10 +14,15 @@
     margin: 0 auto 40px;
   }
 
-  &__content {
+  &__wrapper {
     background-color: $white;
     border-radius: 24px;
     padding: 40px;
+
+    @media (max-width: 768px) {
+      padding: 20px;
+    }
+
   }
 
   &__nav {
@@ -26,10 +31,15 @@
     padding: 8px;
     border-radius: 12px;
     background-color: $light;
+
+    @media (max-width: 768px) {
+      flex-wrap: wrap;
+    }
   }
 
   &__nav-item {
     cursor: pointer;
+    white-space: nowrap;
     border-radius: 8px;
     padding: 10px 32px;
     text-transform: uppercase;
@@ -48,7 +58,7 @@
       color: $light;
     }
 
-    .active {
+    &.active {
       background-color: $accent;
     }
   }
@@ -57,7 +67,6 @@
     display: flex;
     gap: 60px;
     align-items: stretch;
-
     opacity: 0;
     visibility: hidden;
     height: 0;
@@ -69,12 +78,31 @@
       height: auto;
       padding-top: 30px;
     }
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    @media (max-width: 567px) {
+      gap: 20px;
+    }
   }
 
   &__img {
-    max-width: 520px;
-    width: 100%;
+    width: 40%;
     border-radius: 16px;
+    object-fit: cover;
+
+    @media (max-width: 768px) {
+      width: 70%;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 567px) {
+      width: 100%;
+    }
   }
 
   &__description {
