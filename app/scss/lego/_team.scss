@@ -27,14 +27,11 @@
 
   &__nav {
     display: inline-flex;
-    gap: 20px;
+    flex-wrap: wrap;
     padding: 8px;
     border-radius: 12px;
     background-color: $light;
-
-    @media (max-width: 768px) {
-      flex-wrap: wrap;
-    }
+    justify-content: center;
   }
 
   &__nav-item {

@@ -11,6 +11,22 @@
     justify-content: space-between;
     align-items: stretch;
     gap: 30px;
+
+    @media (max-width: 480px) {
+      flex-direction: column;
+    }
+  }
+
+  &__title {
+    margin-bottom: 50px;
+
+    @media (max-width: 1200px) {
+      margin-bottom: 30px;
+    }
+
+    @media (max-width: 480px) {
+      margin-bottom: 16px;
+    }
   }
 
   &__img {

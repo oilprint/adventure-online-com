@@ -1,4 +1,8 @@
 .mission {
+  @media (max-width: 480px) {
+    padding: 24px 0;
+  }
+
   &__text {
     font-size: 68px;
     line-height: 1.3;
@@ -11,13 +15,20 @@
       font-size: 42px;
 
       @media (max-width: 1200px) {
-        font-size: calc(32px + (42 - 32) * ((100vw - 360px) / (1200 - 360)));
+        font-size: calc(16px + (42 - 32) * ((100vw - 360px) / (1200 - 360)));
+      }
+
+      @media (max-width: 480px) {
+        font-size: 16px;
       }
     }
 
     @media (max-width: 1200px) {
-      font-size: calc(32px + (68 - 32) * ((100vw - 360px) / (1200 - 360)));
+      font-size: calc(16px + (68 - 32) * ((100vw - 360px) / (1200 - 360)));
     }
 
+    @media (max-width: 480px) {
+      font-size: 16px;
+    }
   }
 }
